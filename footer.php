@@ -8,16 +8,16 @@
        
         <ul class="list-inline text-center mb-6">
           <li class="list-inline-item mr-3 text-white opacity-7">
-            © 2020 homeID. All Rights Reserved
+            © 2025 Pokhara. All Rights Reserved
           </li>
           <li class="list-inline-item divider mr-3"></li>
           <li class="list-inline-item mr-3">
-            <a href="tel:(+00)123567990" class="text-white font-weight-bold fs-15">(+00) 123 567990</a>
+            <a href="tel:(+00)123567990" class="text-white font-weight-bold fs-15">(+977) 9805007281</a>
           </li>
           <li class="list-inline-item divider mr-3"></li>
           <li class="list-inline-item">
-            <a href="mailto:contact@nepalproperties.com"
-                   class="text-white opacity-7 hover-white">contact@nepalproperties.com</a>
+            <a href="mailto:contact@pokharas.com"
+                   class="text-white opacity-7 hover-white">contact@pokharas.com</a>
           </li>
         </ul>
         <ul class="list-inline text-center mb-2">
