@@ -156,7 +156,7 @@ $property_banner = json_decode($term_result, true);
     <!-- Themes core CSS -->
     <link rel="stylesheet" href="css/themes.css">
     <!-- Favicons -->
-    <link rel="icon" href="images/favicon.ico">
+    <!-- <link rel="icon" href="images/favicon.ico"> -->
  
   </head>
   <body>
