@@ -12,7 +12,7 @@
           </li>
           <li class="list-inline-item divider mr-3"></li>
           <li class="list-inline-item mr-3">
-            <a href="tel:(+00)123567990" class="text-white font-weight-bold fs-15">(+977) 9805007281</a>
+            <a href="tel:+9779805007281" class="text-white font-weight-bold fs-15">(+977) 9805007281</a>
           </li>
           <li class="list-inline-item divider mr-3"></li>
           <li class="list-inline-item">
