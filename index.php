@@ -74,8 +74,7 @@
                     <?php foreach ($property_data as $key =>  $row){ ?> 
                 <div class="col-xxl-3 col-lg-4 col-md-6 mb-6" data-animate="zoomIn">
                   <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
-                    <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img"
-                                 alt="1">
+                    <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
                       <div class="d-flex">
                             <?php if($row['field_listing_type']=='Sale') { ?>

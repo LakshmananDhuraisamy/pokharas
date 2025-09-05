@@ -168,8 +168,7 @@
                      <?php foreach ($property_data as $key =>  $row){ ?>
                       <div class="box px-0">
                         <div class="card border-0">
-                          <img src=" <?php echo $row['field_main_image']; ?>" class="card-img" alt="Villa on Hollywood
-													Boulevard">
+                         <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
                           <div class="card-img-overlay d-flex flex-column bg-gradient-3 rounded-lg">
                             <div class="d-flex mb-auto">
                               <a href="#" class="mr-1 badge badge-orange">featured</a>
@@ -225,10 +224,10 @@
                 <div class="col-md-6 mb-6" bis_skin_checked="1">
                   <div class="card border-0 fadeInUp animated" data-animate="fadeInUp" bis_skin_checked="1">
                     <div class="position-relative hover-change-image bg-hover-overlay rounded-lg card-img" bis_skin_checked="1">
+
+                     <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">                      
                       
-                      <img src="<?php echo $row['field_main_image']; ?>" alt="Home in Metric Way">
-                      
-                      <div class="card-img-overlay d-flex flex-column" bis_skin_checked="1">
+                     <div class="card-img-overlay d-flex flex-column" bis_skin_checked="1">
                         <div bis_skin_checked="1"><span class="badge badge-primary">For Sale</span></div>
                         <div class="mt-auto d-flex hover-image" bis_skin_checked="1">
                           <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
