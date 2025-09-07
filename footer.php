@@ -1,4 +1,4 @@
-    <footer class="bg-dark pt-10 pb-8 footer">
+<footer class="bg-dark pt-10 pb-8 footer">
       <div class="container">
  
  
@@ -256,5 +256,17 @@
        title="Back To Top"><i
             class="fal fa-arrow-up"></i></a>
     </div>
+
+    <script>
+      jQuery(document).ready(function($) {
+        $('.home_property_link').on('click', function() {
+          var property_id = $(this).data('id');
+          if(property_id) {
+            window.location.href = 'property/' + property_id;
+          }
+          });
+        });
+        </script>
+        
   </body>
 </html>

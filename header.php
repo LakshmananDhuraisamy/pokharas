@@ -165,7 +165,7 @@ $property_banner = json_decode($term_result, true);
         <div class="container container-xxl">
           <nav class="navbar navbar-expand-xl bg-transparent px-0 w-100">
             <a class="navbar-brand order-0 order-xl-1 mx-xl-auto"
-                   href="index.php">
+                   href="/index">
                Nepal Properties
             </a>
            
@@ -185,7 +185,7 @@ $property_banner = json_decode($term_result, true);
                 <li id="navbar-item-home" aria-haspopup="true" aria-expanded="false"
         class="nav-item dropdown py-2 py-xl-5 px-0 px-xl-4">
                   <a class="nav-link p-0"
-           href="index.php"  >
+           href="/index"  >
                     Home
                   </a>
                  
@@ -212,3 +212,9 @@ $property_banner = json_decode($term_result, true);
         </div>
       </div>
     </header>
+
+    <style>
+      .home_property_link {
+        cursor: pointer;
+      }
+    </style>

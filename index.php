@@ -44,7 +44,7 @@
               <h2 class="text-heading">Popular Properties</h2>
               <span class="heading-divider"></span>
                
-              <p class="mb-7">Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit</p>
+              <!-- <p class="mb-7">Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit</p> -->
             </div>
             <div class="col-lg-7 col-xxl-6">
               <ul class="nav nav-pills mt-lg-4 justify-content-lg-end mb-lg-0 mb-6" role="tablist">
@@ -72,7 +72,7 @@
                  role="tabpanel" aria-labelledby="pills-all-tab">
               <div class="row">
                     <?php foreach ($property_data as $key =>  $row){ ?> 
-                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6" data-animate="zoomIn">
+                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
                   <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
                     <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
@@ -131,7 +131,7 @@
               <div class="row">
                   <?php
                     foreach ($property_data_aprt as $key =>  $row){ ?> 
-                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6" data-animate="zoomIn">
+                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
                   <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
                 <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
@@ -191,7 +191,7 @@
 
                   <?php
                     foreach ($property_data_villa as $key =>  $row){ ?> 
-                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6" data-animate="zoomIn">
+                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
                   <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
                     <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
@@ -247,7 +247,7 @@
             </div>
           </div>
           <div class="text-center">
-            <a href="list.php"
+            <a href="list"
                class="btn btn-lg text-secondary btn-accent rounded-lg mt-6">See all properties
               <i class="far fa-long-arrow-right ml-1"></i>
             </a>
@@ -319,7 +319,7 @@
               <p class="mb-7">Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit</p>
             </div>
             <div class="col-md-6 text-md-right">
-              <a href="list.php"
+              <a href="list"
                    class="btn btn-lg text-secondary btn-accent rounded-lg mb-8">See all properties
                 <i class="far fa-long-arrow-right ml-1"></i>
               </a>
