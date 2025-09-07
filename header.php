@@ -154,7 +154,7 @@ $property_banner = json_decode($term_result, true);
     <link rel="stylesheet" href="/vendors/mapbox-gl/mapbox-gl.min.css">
     <link rel="stylesheet" href="/vendors/dataTables/jquery.dataTables.min.css">
     <!-- Themes core CSS -->
-    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="/css/themes.css">
     <!-- Favicons -->
     <!-- <link rel="icon" href="images/favicon.ico"> -->
  
