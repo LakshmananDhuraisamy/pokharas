@@ -57,7 +57,7 @@
             <div class="col-lg-6 p-1" bis_skin_checked="1">
               <div class="item item-size-4-3" bis_skin_checked="1">
                 <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                  <a href="images/single-property-lg-1.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-2.jpg')">
+                  <a href="/images/single-property-lg-1.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-2.jpg')">
                   </a>
                 </div>
               </div>
@@ -67,7 +67,7 @@
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="images/single-property-lg-2.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-22.jpg')">
+                      <a href="/images/single-property-lg-2.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-22.jpg')">
                       </a>
                     </div>
                   </div>
@@ -75,7 +75,7 @@
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="images/single-property-lg-3.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-3.jpg')">
+                      <a href="/images/single-property-lg-3.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-3.jpg')">
                       </a>
                     </div>
                   </div>
@@ -83,7 +83,7 @@
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="images/single-property-lg-4.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-4.jpg')">
+                      <a href="/images/single-property-lg-4.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-4.jpg')">
                       </a>
                     </div>
                   </div>
@@ -91,7 +91,7 @@
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="images/single-property-lg-5.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-5.jpg')">
+                      <a href="/images/single-property-lg-5.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-5.jpg')">
                       </a>
                       <a href="#" class="card-img-overlay d-flex flex-column align-items-center justify-content-center hover-image bg-dark-opacity-04">
                         <p class="fs-48 font-weight-600 text-white lh-1 mb-4">+12</p>
@@ -350,7 +350,7 @@
                   </div>
                   <div id="collapse-01" class="collapse show" aria-labelledby="floor-plans-01" data-parent="#accordion-01" bis_skin_checked="1">
                     <div class="card-body card-body col-sm-6 offset-sm-3 mb-3" bis_skin_checked="1">
-                      <img src="images/single-detail-property-01.jpg" class="card-img" alt="Floor Plans">
+                      <img src="/images/single-detail-property-01.jpg" class="card-img" alt="Floor Plans">
                     </div>
                   </div>
                 </div>
@@ -369,7 +369,7 @@
                   </div>
                   <div id="collapse-02" class="collapse " aria-labelledby="floor-plans-02" data-parent="#accordion-02" bis_skin_checked="1">
                     <div class="card-body card-body col-sm-6 offset-sm-3 mb-3" bis_skin_checked="1">
-                      <img src="images/single-detail-property-01.jpg" class="card-img" alt="Floor Plans">
+                      <img src="/images/single-detail-property-01.jpg" class="card-img" alt="Floor Plans">
                     </div>
                   </div>
                 </div>
@@ -388,7 +388,7 @@
                   </div>
                   <div id="collapse-03" class="collapse " aria-labelledby="floor-plans-03" data-parent="#accordion-03" bis_skin_checked="1">
                     <div class="card-body card-body col-sm-6 offset-sm-3 mb-3" bis_skin_checked="1">
-                      <img src="images/single-detail-property-01.jpg" class="card-img" alt="Floor Plans">
+                      <img src="/images/single-detail-property-01.jpg" class="card-img" alt="Floor Plans">
                     </div>
                   </div>
                 </div>
@@ -564,7 +564,7 @@
                   <h3 class="fs-16 lh-2 text-heading mb-0 d-inline-block pr-4 border-bottom border-primary">5
                     Reviews</h3>
                   <div class="media border-top pt-7 pb-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
-                    <img src="images/review-07.jpg" alt="Danny Fox" class="mr-sm-8 mb-4 mb-sm-0">
+                    <img src="/images/review-07.jpg" alt="Danny Fox" class="mr-sm-8 mb-4 mb-sm-0">
                     <div class="media-body" bis_skin_checked="1">
                       <div class="row mb-1 align-items-center" bis_skin_checked="1">
                         <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
@@ -601,7 +601,7 @@
                     </div>
                   </div>
                   <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
-                    <img src="images/review-08.jpg" alt="Viola Austin" class="mr-sm-8 mb-4 mb-sm-0">
+                    <img src="/images/review-08.jpg" alt="Viola Austin" class="mr-sm-8 mb-4 mb-sm-0">
                     <div class="media-body" bis_skin_checked="1">
                       <div class="row mb-1 align-items-center" bis_skin_checked="1">
                         <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
@@ -638,7 +638,7 @@
                     </div>
                   </div>
                   <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
-                    <img src="images/review-09.jpg" alt="Nettie Singleton" class="mr-sm-8 mb-4 mb-sm-0">
+                    <img src="/images/review-09.jpg" alt="Nettie Singleton" class="mr-sm-8 mb-4 mb-sm-0">
                     <div class="media-body" bis_skin_checked="1">
                       <div class="row mb-1 align-items-center" bis_skin_checked="1">
                         <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
@@ -675,7 +675,7 @@
                     </div>
                   </div>
                   <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
-                    <img src="images/review-07.jpg" alt="Vernon Fisher" class="mr-sm-8 mb-4 mb-sm-0">
+                    <img src="/images/review-07.jpg" alt="Vernon Fisher" class="mr-sm-8 mb-4 mb-sm-0">
                     <div class="media-body" bis_skin_checked="1">
                       <div class="row mb-1 align-items-center" bis_skin_checked="1">
                         <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
@@ -944,7 +944,7 @@
                           <div class="form-check-label ml-2" bis_skin_checked="1">
                             <div class="d-flex align-items-center" bis_skin_checked="1">
                               <a href="agent-details-1.html" class="d-block w-60px h-60 mr-3">
-                                <img src="images/agent-2.jpg" class="rounded-circle" alt="agent-2">
+                                <img src="/images/agent-2.jpg" class="rounded-circle" alt="agent-2">
                               </a>
                               <div bis_skin_checked="1">
                                 <a href="agent-details-1.html" class="d-block text-dark font-weight-500 lh-15 hover-primary">Oliver
@@ -961,7 +961,7 @@
                           <div class="form-check-label ml-2" bis_skin_checked="1">
                             <div class="d-flex align-items-center" bis_skin_checked="1">
                               <a href="agent-details-1.html" class="d-block w-60px h-60 mr-3">
-                                <img src="images/agent-1.jpg" class="rounded-circle" alt="agent-1">
+                                <img src="/images/agent-1.jpg" class="rounded-circle" alt="agent-1">
                               </a>
                               <div bis_skin_checked="1">
                                 <a href="agent-details-1.html" class="d-block text-dark font-weight-500 lh-15 hover-primary">Max
@@ -1010,7 +1010,7 @@
     <section data-animated-id="5">
       <div class="d-flex bottom-bar-action bottom-bar-action-01 py-2 px-4 bg-gray-01 align-items-center position-fixed fixed-bottom d-sm-none" bis_skin_checked="1">
         <div class="media align-items-center" bis_skin_checked="1">
-          <img src="images/irene-wallace.png" alt="Irene Wallace" class="mr-4 rounded-circle">
+          <img src="/images/irene-wallace.png" alt="Irene Wallace" class="mr-4 rounded-circle">
           <div class="media-body" bis_skin_checked="1">
             <a href="#" class="d-block text-dark fs-15 font-weight-500 lh-15">Irene Wallace</a>
             <span class="fs-13 lh-2">Sales Excutive</span>
