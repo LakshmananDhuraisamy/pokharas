@@ -57,7 +57,7 @@
             <div class="col-lg-6 p-1" bis_skin_checked="1">
               <div class="item item-size-4-3" bis_skin_checked="1">
                 <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                  <a href="/images/single-property-lg-1.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-2.jpg')">
+                  <a href="/images/single-property-lg-1.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-2.jpg')">
                   </a>
                 </div>
               </div>
@@ -67,7 +67,7 @@
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="/images/single-property-lg-2.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-22.jpg')">
+                      <a href="/images/single-property-lg-2.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-22.jpg')">
                       </a>
                     </div>
                   </div>
@@ -75,7 +75,7 @@
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="/images/single-property-lg-3.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-3.jpg')">
+                      <a href="/images/single-property-lg-3.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-3.jpg')">
                       </a>
                     </div>
                   </div>
@@ -83,7 +83,7 @@
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="/images/single-property-lg-4.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-4.jpg')">
+                      <a href="/images/single-property-lg-4.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-4.jpg')">
                       </a>
                     </div>
                   </div>
@@ -91,7 +91,7 @@
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="/images/single-property-lg-5.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('images/single-property-5.jpg')">
+                      <a href="/images/single-property-lg-5.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-5.jpg')">
                       </a>
                       <a href="#" class="card-img-overlay d-flex flex-column align-items-center justify-content-center hover-image bg-dark-opacity-04">
                         <p class="fs-48 font-weight-600 text-white lh-1 mb-4">+12</p>
