@@ -293,7 +293,7 @@
                   <?php } ?> 
                   
               </div>
-              <nav class="pt-4">
+              <!-- <nav class="pt-4">
                 <ul class="pagination rounded-active justify-content-center mb-0">
                   <li class="page-item"><a class="page-link" href="#"><i class="far fa-angle-double-left"></i></a>
                   </li>
@@ -304,7 +304,7 @@
                   <li class="page-item"><a class="page-link" href="#">6</a></li>
                   <li class="page-item"><a class="page-link" href="#"><i class="far fa-angle-double-right"></i></a></li>
                 </ul>
-              </nav>
+              </nav> -->
             </div>
           </div>
         </div>

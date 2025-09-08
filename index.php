@@ -379,7 +379,7 @@
                   <h2 class="my-0 mt-1"><a href="/"
                                                  class="fs-16 text-dark hover-primary lh-2">Villa on Hollywood Boulevard</a>
                   </h2>
-                  <p class="text-gray-light font-weight-500 mb-1">1421 San Pedro St, Los Angeles</p>
+                  <p class="text-gray-light font-weight-500 mb-1"> San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-0">$1.250.000</p>
                 </div>
               </div>
@@ -457,7 +457,7 @@
                   <h2 class="my-0 mt-1"><a href="/"
                                                  class="fs-16 text-dark hover-primary lh-2">Villa on Hollywood Boulevard</a>
                   </h2>
-                  <p class="text-gray-light font-weight-500 mb-1">1421 San Pedro St, Los Angeles</p>
+                  <p class="text-gray-light font-weight-500 mb-1"> San Pedro St, Los Angeles</p>
                   <p class="fs-17 font-weight-bold text-heading mb-0">$550<span
                                 class="text-gray-light font-weight-500 fs-14"> / month</span></p>
                 </div>
