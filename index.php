@@ -96,13 +96,6 @@
                                <?php echo $row['field_bhk_type']; ?> 
                             </li>
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
-                              <svg class="icon icon-shower fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-shower"></use>
-                              </svg>
-                              3 Ba
-                            </li>
-                            <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
                                                 data-toggle="tooltip" title="<?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> ">
                               <svg class="icon icon-square fs-18 text-primary mr-1">
                                 <use xlink:href="#icon-square"></use>
@@ -153,13 +146,6 @@
                                 <use xlink:href="#icon-bedroom"></use>
                               </svg>
                                <?php echo $row['field_bhk_type']; ?>
-                            </li>
-                            <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
-                              <svg class="icon icon-shower fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-shower"></use>
-                              </svg>
-                              3 Ba
                             </li>
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
                                                 data-toggle="tooltip" title="<?php echo $row['field_built_up_area_in_sq_ft_sq']; ?>">
@@ -213,13 +199,6 @@
                                 <use xlink:href="#icon-bedroom"></use>
                               </svg>
                                <?php echo $row['field_bhk_type']; ?>
-                            </li>
-                            <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
-                              <svg class="icon icon-shower fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-shower"></use>
-                              </svg>
-                              3 Ba
                             </li>
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
                                                 data-toggle="tooltip" title=" <?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> Sq.Ft">
