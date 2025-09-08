@@ -17,9 +17,27 @@ if (!$term_result) {
 
 // Decode the JSON testimonial_result
 $single_page_property_data = json_decode($term_result, true);
- $main_image = explode(',', $single_page_property_data[0]['field_main_image']);
+$main_image = explode(',', $single_page_property_data[0]['field_main_image']);
  $multi_images = explode(',', $single_page_property_data[0]['field_images']);
-  
+ 
+ 
+ $term_url=$app_url.'single_property_reviews/'.$explode_pro[2]; 
+$termch = curl_init($term_url);
+curl_setopt($termch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($termch, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json',
+]);
+
+// Execute request
+$term_result = curl_exec($termch);
+if (!$term_result) {
+    die("Failed to fetch the data: " . curl_error($ch));
+}
+
+// Decode the JSON testimonial_result
+$property_reviews = json_decode($term_result, true);
+
+
 ?>
 <style>
 .sticky-area-wrap{
@@ -70,7 +88,7 @@ $single_page_property_data = json_decode($term_result, true);
                   </div>
                 </div>
             <?php } ?>   
-            
+
               </div>
             </div>
           </div>
@@ -420,209 +438,56 @@ $single_page_property_data = json_decode($term_result, true);
                 </div>
               </div>
             </section>
+
+<?php if(count($property_reviews)>0){ ?>
             <section class="pt-5">
               <div class="card border-0 mb-4" bis_skin_checked="1">
                 <div class="card-body p-0" bis_skin_checked="1">
-                  <h3 class="fs-16 lh-2 text-heading mb-0 d-inline-block pr-4 border-bottom border-primary">5
+                  <h3 class="fs-16 lh-2 text-heading mb-0 d-inline-block pr-4 border-bottom border-primary"><?php echo count($property_reviews); ?>
                     Reviews</h3>
+        <?php  foreach ($property_reviews as $key => $value) {  ?>
+
                   <div class="media border-top pt-7 pb-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
-                    <img src="/images/review-07.jpg" alt="Danny Fox" class="mr-sm-8 mb-4 mb-sm-0">
-                    <div class="media-body" bis_skin_checked="1">
-                      <div class="row mb-1 align-items-center" bis_skin_checked="1">
-                        <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
-                          <h4 class="mb-0 text-heading fs-14">Danny Fox</h4>
-                        </div>
-                        <div class="col-sm-6" bis_skin_checked="1">
-                          <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                        always
-                        keeping your WordPress themes up to date. Your level of support and dedication
-                        is second to none.</p>
-                      <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
-                        <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
-                    <img src="/images/review-08.jpg" alt="Viola Austin" class="mr-sm-8 mb-4 mb-sm-0">
-                    <div class="media-body" bis_skin_checked="1">
-                      <div class="row mb-1 align-items-center" bis_skin_checked="1">
-                        <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
-                          <h4 class="mb-0 text-heading fs-14">Viola Austin</h4>
-                        </div>
-                        <div class="col-sm-6 " bis_skin_checked="1">
-                          <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                        always
-                        keeping your WordPress themes up to date. Your level of support and dedication
-                        is second to none.</p>
-                      <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
-                        <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
-                    <img src="/images/review-09.jpg" alt="Nettie Singleton" class="mr-sm-8 mb-4 mb-sm-0">
-                    <div class="media-body" bis_skin_checked="1">
-                      <div class="row mb-1 align-items-center" bis_skin_checked="1">
-                        <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
-                          <h4 class="mb-0 text-heading fs-14">Nettie Singleton</h4>
-                        </div>
-                        <div class="col-sm-6 " bis_skin_checked="1">
-                          <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                        always
-                        keeping your WordPress themes up to date. Your level of support and dedication
-                        is second to none.</p>
-                      <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
-                        <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
-                    <img src="/images/review-07.jpg" alt="Vernon Fisher" class="mr-sm-8 mb-4 mb-sm-0">
-                    <div class="media-body" bis_skin_checked="1">
-                      <div class="row mb-1 align-items-center" bis_skin_checked="1">
-                        <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
-                          <h4 class="mb-0 text-heading fs-14">Vernon Fisher</h4>
-                        </div>
-                        <div class="col-sm-6" bis_skin_checked="1">
-                          <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-border fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                        always
-                        keeping your WordPress themes up to date. Your level of support and dedication
-                        is second to none.</p>
-                      <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
-                        <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="media border-top py-6 d-sm-flex d-block text-sm-left text-center" bis_skin_checked="1">
                     <div class="w-82px h-82 mr-2 bg-gray-01 rounded-circle fs-25 font-weight-500 text-muted d-flex align-items-center justify-content-center text-uppercase mr-sm-8 mb-4 mb-sm-0 mx-auto" bis_skin_checked="1">
-                      HI
+                      U
                     </div>
+
                     <div class="media-body" bis_skin_checked="1">
                       <div class="row mb-1 align-items-center" bis_skin_checked="1">
                         <div class="col-sm-6 mb-2 mb-sm-0" bis_skin_checked="1">
-                          <h4 class="mb-0 text-heading fs-14">Harry Iglesias</h4>
+                          <h4 class="mb-0 text-heading fs-14"><?php echo  $value['field_reviewer_name']; ?></h4>
                         </div>
                         <div class="col-sm-6" bis_skin_checked="1">
+                          
+                          <?php  $star_ratings = $value['field_property_star_rating']; ?>
+
+
                           <ul class="list-inline d-flex justify-content-sm-end justify-content-center mb-0">
+                            <?php for ($i=1; $i <= $star_ratings ; $i++) {  ?> 
                             <li class="list-inline-item mr-1">
                               <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
                             </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-warning fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
-                            <li class="list-inline-item mr-1">
-                              <span class="text-border fs-12 lh-2"><i class="fas fa-star"></i></span>
-                            </li>
+                             <?php } ?> 
                           </ul>
                         </div>
                       </div>
-                      <p class="mb-3 pr-xl-17">Very good and fast support during the week. Thanks for
-                        always
-                        keeping your WordPress themes up to date. Your level of support and dedication
-                        is second to none.</p>
+                      <p class="mb-3 pr-xl-17"><?php echo  $value['field_reviewer_message']; ?></p>
                       <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
-                        <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
+                        <p class="mb-0 text-muted fs-13 lh-1"><?php echo  $value['created']; ?></p>
                       </div>
                     </div>
                   </div>
+                   <?php } ?>  
+
                 </div>
               </div>
             </section>
-            <section class="py-6 border-bottom">
-              <h4 class="fs-22 text-heading mb-6">Virtual Tour</h4>
-              <iframe height="430" src="https://my.matterport.com/show/?m=wWcGxjuUuSb&amp;utm_source=hit-content-embed" allowfullscreen="" class="w-100"></iframe>
-            </section>
+           <?php } ?>
             <section class="py-6 border-bottom">
               <h4 class="fs-22 text-heading mb-6">Location</h4>
               <div class="position-relative" bis_skin_checked="1">
-                <div id="map" class="mapbox-gl map-point-animate mapboxgl-map" data-mapbox-access-token="pk.eyJ1IjoiZzVvbmxpbmUiLCJhIjoiY2xkMDB1b2ZvMDRmMjNxcWpwajV5NTFjeiJ9.OTlSugt4ZFDFny07_l2s7Q" data-mapbox-options="{&quot;center&quot;:[-73.9927227, 40.6741035],&quot;setLngLat&quot;:[-73.9927227, 40.6741035]}" data-mapbox-marker="[{&quot;position&quot;:[-73.9927227, 40.6741035],&quot;className&quot;:&quot;marker&quot;,&quot;backgroundImage&quot;:&quot;images/googlle-market-01.png&quot;,&quot;backgroundRepeat&quot;:&quot;no-repeat&quot;,&quot;width&quot;:&quot;30px&quot;,&quot;height&quot;:&quot;40px&quot;}]" bis_skin_checked="1">
-                <div class="mapboxgl-canary" style="visibility: hidden;" bis_skin_checked="1"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate" bis_skin_checked="1"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" width="745" height="430" style="width: 745px; height: 430px;"></canvas><div class="marker mapboxgl-marker mapboxgl-marker-anchor-center" bis_skin_checked="1" style="background-image: url(&quot;images/googlle-market-01.png&quot;); background-repeat: no-repeat; width: 30px; height: 40px; transform: translate(-50%, -50%) translate(372px, 215px) rotateX(0deg) rotateZ(0deg);"></div></div><div class="mapboxgl-control-container" bis_skin_checked="1"><div class="mapboxgl-ctrl-top-left" bis_skin_checked="1"></div><div class="mapboxgl-ctrl-top-right" bis_skin_checked="1"><div class="mapboxgl-ctrl mapboxgl-ctrl-group" bis_skin_checked="1"><button class="mapboxgl-ctrl-zoom-in" type="button" title="Zoom in" aria-label="Zoom in"><span class="mapboxgl-ctrl-icon" aria-hidden="true"></span></button><button class="mapboxgl-ctrl-zoom-out" type="button" title="Zoom out" aria-label="Zoom out"><span class="mapboxgl-ctrl-icon" aria-hidden="true"></span></button><button class="mapboxgl-ctrl-compass" type="button" title="Reset bearing to north" aria-label="Reset bearing to north"><span class="mapboxgl-ctrl-icon" aria-hidden="true" style="transform: rotate(0deg);"></span></button></div></div><div class="mapboxgl-ctrl-bottom-left" bis_skin_checked="1"><div class="mapboxgl-ctrl" bis_skin_checked="1" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div><div class="mapboxgl-ctrl-bottom-right" bis_skin_checked="1"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib" bis_skin_checked="1"><div class="mapboxgl-ctrl-attrib-inner" bis_skin_checked="1"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox">© Mapbox</a> <a href="https://www.openstreetmap.org/copyright/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=light-v10&amp;access_token=pk.eyJ1IjoiZzVvbmxpbmUiLCJhIjoiY2xkMDB1b2ZvMDRmMjNxcWpwajV5NTFjeiJ9.OTlSugt4ZFDFny07_l2s7Q" target="_blank" title="Improve this map" aria-label="Improve this map" rel="noopener nofollow">Improve this map</a></div></div></div></div></div>
-                <p class="mb-0 p-3 bg-white shadow rounded-lg position-absolute pos-fixed-bottom mb-4 ml-4 lh-17 z-index-2">
-                  62 Gresham St, Victoria Park <br>
-                   WA 6100, Australia</p>
-              </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112488.38821620736!2d83.9566183!3d28.2297224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara%2C%20Nepal!5e0!3m2!1sen!2sin!4v1757329116001!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+            </div>
             </section>
               
           </article>
