@@ -688,10 +688,6 @@ $single_page_property_data = json_decode($term_result, true);
                     <a class="nav-link active px-3" data-toggle="tab" href="#schedule" role="tab" aria-selected="true">Schedule
                       A Tour</a>
                   </li>
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link px-3" data-toggle="tab" href="#request-info" role="tab" aria-selected="false">Request
-                      Info</a>
-                  </li>
                 </ul>
                 <div class="card-body px-sm-6 shadow-xxs-2 pb-5 pt-0" bis_skin_checked="1">
                   <form>
@@ -799,65 +795,7 @@ $single_page_property_data = json_decode($term_result, true);
                             eleifend donec.</label>
                         </div>
                       </div>
-                      <div class="tab-pane fade pt-5" id="request-info" role="tabpanel" bis_skin_checked="1">
-                        <div class="form-check d-flex align-items-center border-bottom pb-3 mb-3" bis_skin_checked="1">
-                          <input class="form-check-input" type="radio" name="agent" value="option1">
-                          <div class="form-check-label ml-2" bis_skin_checked="1">
-                            <div class="d-flex align-items-center" bis_skin_checked="1">
-                              <a href="agent-details-1.html" class="d-block w-60px h-60 mr-3">
-                                <img src="/images/agent-2.jpg" class="rounded-circle" alt="agent-2">
-                              </a>
-                              <div bis_skin_checked="1">
-                                <a href="agent-details-1.html" class="d-block text-dark font-weight-500 lh-15 hover-primary">Oliver
-                                  Beddows</a>
-                                <p class="mb-0 fs-13 mb-0 lh-17">Sales Excutive</p>
-                                <p class="mb-0 fs-13 mb-0 lh-17"><span>(+123)</span><span class="text-heading d-inline-block ml-2">1900 68668</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-check d-flex align-items-center mb-6" bis_skin_checked="1">
-                          <input class="form-check-input" type="radio" name="agent" id="inlineRadio2" value="option2">
-                          <div class="form-check-label ml-2" bis_skin_checked="1">
-                            <div class="d-flex align-items-center" bis_skin_checked="1">
-                              <a href="agent-details-1.html" class="d-block w-60px h-60 mr-3">
-                                <img src="/images/agent-1.jpg" class="rounded-circle" alt="agent-1">
-                              </a>
-                              <div bis_skin_checked="1">
-                                <a href="agent-details-1.html" class="d-block text-dark font-weight-500 lh-15 hover-primary">Max
-                                  Kordex</a>
-                                <p class="mb-0 fs-13 mb-0 lh-17">Real estate broker</p>
-                                <p class="mb-0 fs-13 mb-0 lh-17"><span>(+123)</span><span class="text-heading d-inline-block ml-2">1900 68668</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group mb-2" bis_skin_checked="1">
-                          <input type="text" class="form-control form-control-lg border-0" placeholder="First Name, Last Name">
-                        </div>
-                        <div class="form-group mb-2" bis_skin_checked="1">
-                          <input type="email" class="form-control form-control-lg border-0" placeholder="Your Email">
-                        </div>
-                        <div class="form-group mb-2" bis_skin_checked="1">
-                          <input type="tel" class="form-control form-control-lg border-0" placeholder="Your phone">
-                        </div>
-                        <div class="form-group mb-4" bis_skin_checked="1">
-                          <textarea class="form-control border-0" rows="4">Hello, I'm interested in Villa Called Archangel</textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block rounded">Request
-                          Info
-                        </button>
-                        <div class="form-group form-check mt-2 mb-0" bis_skin_checked="1">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                          <label class="form-check-label fs-13" for="exampleCheck2">Egestas fringilla
-                            phasellus
-                            faucibus
-                            scelerisque
-                            eleifend donec.</label>
-                        </div>
-                      </div>
+                    
                     </div>
                   </form>
                 </div>
@@ -867,54 +805,7 @@ $single_page_property_data = json_decode($term_result, true);
         </div>
       </div>
     </div>
-      
-    <section data-animated-id="5">
-      <div class="d-flex bottom-bar-action bottom-bar-action-01 py-2 px-4 bg-gray-01 align-items-center position-fixed fixed-bottom d-sm-none" bis_skin_checked="1">
-        <div class="media align-items-center" bis_skin_checked="1">
-          <img src="/images/irene-wallace.png" alt="Irene Wallace" class="mr-4 rounded-circle">
-          <div class="media-body" bis_skin_checked="1">
-            <a href="#" class="d-block text-dark fs-15 font-weight-500 lh-15">Irene Wallace</a>
-            <span class="fs-13 lh-2">Sales Excutive</span>
-          </div>
-        </div>
-        <div class="ml-auto" bis_skin_checked="1">
-          <button type="button" class="btn btn-primary fs-18 p-2 lh-1 mr-1 mb-1 shadow-none" data-toggle="modal" data-target="#modal-messenger"><i class="fal fa-comment"></i></button>
-          <a href="tel:(+84)2388-969-888" class="btn btn-primary fs-18 p-2 lh-1 mb-1 shadow-none" target="_blank"><i class="fal fa-phone"></i></a>
-        </div>
-      </div>
-      <div class="modal fade" id="modal-messenger" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" bis_skin_checked="1">
-        <div class="modal-dialog" bis_skin_checked="1">
-          <div class="modal-content" bis_skin_checked="1">
-            <div class="modal-header border-0 pb-0" bis_skin_checked="1">
-              <h4 class="modal-title text-heading" id="exampleModalLabel">Contact Form</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div class="modal-body pb-6" bis_skin_checked="1">
-              <div class="form-group mb-2" bis_skin_checked="1">
-                <input type="text" class="form-control form-control-lg border-0" placeholder="First Name, Last Name">
-              </div>
-              <div class="form-group mb-2" bis_skin_checked="1">
-                <input type="email" class="form-control form-control-lg border-0" placeholder="Your Email">
-              </div>
-              <div class="form-group mb-2" bis_skin_checked="1">
-                <input type="tel" class="form-control form-control-lg border-0" placeholder="Your phone">
-              </div>
-              <div class="form-group mb-2" bis_skin_checked="1">
-                <textarea class="form-control border-0" rows="4">Hello, I'm interested in Villa Called Archangel</textarea>
-              </div>
-              <div class="form-group form-check mb-4" bis_skin_checked="1">
-                <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                <label class="form-check-label fs-13" for="exampleCheck3">Egestas fringilla phasellus faucibus
-                  scelerisque eleifend donec.</label>
-              </div>
-              <button type="submit" class="btn btn-primary btn-lg btn-block rounded">Request Info</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+       
   </main>
 
 
