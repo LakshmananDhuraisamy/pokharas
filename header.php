@@ -217,4 +217,30 @@ $property_banner = json_decode($term_result, true);
       .home_property_link {
         cursor: pointer;
       }
+
+    .home_property_link img {
+            height: 300px;
+            object-fit: cover;
+          }
+
+      @media screen and (max-width: 768px) {
+        .home_property_link img {
+          height: 200px !important;
+        }
+        .home_property_link  .list-inline{
+          display: none !important;
+        }
+
+        .home_property_link  .card-img-overlay  p{
+          font-size: 12px !important;
+        }
+        .home_property_link  .card-img-overlay  h4 a{
+          font-size: 10px !important;
+        }
+         .home_property_link  .card-img-overlay .border-top {
+          border-top : 0px solid #fff !important;
+        }
+ 
+    
+      }
     </style>

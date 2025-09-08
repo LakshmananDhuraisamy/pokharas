@@ -72,9 +72,9 @@
                  role="tabpanel" aria-labelledby="pills-all-tab">
               <div class="row">
                     <?php foreach ($property_data as $key =>  $row){ ?> 
-                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
+                <div class="col-xxl-3 col-lg-3 col-md-6 col-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
                   <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
-                    <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
+                    <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>"  class="card-img" alt="1">
                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
                       <div class="d-flex">
                             <?php if($row['field_listing_type']=='Sale') { ?>
@@ -84,12 +84,12 @@
                         <?php } ?> 
                       </div>
                       <div class="mt-auto px-2">
-                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?> NPR</p>
+                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
                         <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal" class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
+                                                data-toggle="tooltip" title="  <?php echo $row['field_bhk_type']; ?> ">
                               <svg class="icon icon-bedroom fs-18 text-primary mr-1">
                                 <use xlink:href="#icon-bedroom"></use>
                               </svg>
@@ -103,7 +103,7 @@
                               3 Ba
                             </li>
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
+                                                data-toggle="tooltip" title="<?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> ">
                               <svg class="icon icon-square fs-18 text-primary mr-1">
                                 <use xlink:href="#icon-square"></use>
                               </svg>
@@ -131,7 +131,7 @@
               <div class="row">
                   <?php
                     foreach ($property_data_aprt as $key =>  $row){ ?> 
-                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
+                <div class="col-xxl-3 col-lg-3 col-md-6  col-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
                   <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
                 <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
@@ -143,12 +143,12 @@
                         <?php } ?> 
                       </div>
                       <div class="mt-auto px-2">
-                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?> NPR</p>
+                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
                         <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void()" data-toggle="modal" data-target="#myModal"  class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
+                                                data-toggle="tooltip" title=" <?php echo $row['field_bhk_type']; ?>">
                               <svg class="icon icon-bedroom fs-18 text-primary mr-1">
                                 <use xlink:href="#icon-bedroom"></use>
                               </svg>
@@ -162,7 +162,7 @@
                               3 Ba
                             </li>
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
+                                                data-toggle="tooltip" title="<?php echo $row['field_built_up_area_in_sq_ft_sq']; ?>">
                               <svg class="icon icon-square fs-18 text-primary mr-1">
                                 <use xlink:href="#icon-square"></use>
                               </svg>
@@ -191,7 +191,7 @@
 
                   <?php
                     foreach ($property_data_villa as $key =>  $row){ ?> 
-                <div class="col-xxl-3 col-lg-4 col-md-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
+                <div class="col-xxl-3 col-lg-3 col-md-6  col-6 mb-6 home_property_link" data-id="<?php echo $row['nid']; ?>" data-animate="zoomIn">
                   <div class="card border-0 bg-overlay-gradient-3 rounded-lg hover-change-image">
                     <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
                     <div class="card-img-overlay d-flex flex-column position-relative-sm">
@@ -203,12 +203,12 @@
                         <?php } ?> 
                       </div>
                       <div class="mt-auto px-2">
-                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?> NPR</p>
+                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
                         <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void()" data-toggle="modal" data-target="#myModal" class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
+                                                data-toggle="tooltip" title="<?php echo $row['field_bhk_type']; ?>">
                               <svg class="icon icon-bedroom fs-18 text-primary mr-1">
                                 <use xlink:href="#icon-bedroom"></use>
                               </svg>
@@ -222,7 +222,7 @@
                               3 Ba
                             </li>
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
+                                                data-toggle="tooltip" title=" <?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> Sq.Ft">
                               <svg class="icon icon-square fs-18 text-primary mr-1">
                                 <use xlink:href="#icon-square"></use>
                               </svg>
