@@ -16,6 +16,12 @@ if (!$term_result) {
 // Decode the JSON testimonial_result
 $list_page_property_data_all = json_decode($term_result, true);
 ?>
+<style>
+.sticky-area-wrap{
+    background: black !important;
+    border-radius: 90px !important;
+}
+</style>
 <main id="content">
       <section class="pb-8 page-title shadow" data-animated-id="1">
         <div class="container" bis_skin_checked="1">

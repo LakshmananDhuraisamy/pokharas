@@ -17,10 +17,21 @@ if (!$term_result) {
 
 // Decode the JSON testimonial_result
 $single_page_property_data = json_decode($term_result, true);
+ $main_image = explode(',', $single_page_property_data[0]['field_main_image']);
+ $multi_images = explode(',', $single_page_property_data[0]['field_images']);
+  
 ?>
+<style>
+.sticky-area-wrap{
+    background: black !important;
+    border-radius: 90px !important;
+}
+</style>
 
 <main id="content">
-      <section data-animated-id="1">
+<br><br><br> <br>
+      <div class="position-relative">
+<section data-animated-id="1">
         <div class="container" bis_skin_checked="1">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb pt-lg-0 pb-3">
@@ -36,90 +47,30 @@ $single_page_property_data = json_decode($term_result, true);
         </div>
         <div class="container-fluid" bis_skin_checked="1">
           <div class="position-relative zoomIn animated" data-animate="zoomIn" bis_skin_checked="1">
-            <div class="position-absolute pos-fixed-top-right z-index-3" bis_skin_checked="1">
-              <ul class="list-inline pt-4 pr-5">
-                <li class="list-inline-item mr-2">
-                  <a href="#" data-toggle="tooltip" title="" class="d-flex align-items-center justify-content-center w-40px h-40 bg-white text-heading bg-hover-primary hover-white rounded-circle" data-original-title="Favourite">
-                    <i class="far fa-heart"></i></a>
-                </li>
-                <li class="list-inline-item mr-2">
-                  <button type="button" class="btn btn-white p-0 d-flex align-items-center justify-content-center w-40px h-40 text-heading bg-hover-primary hover-white rounded-circle border-0 shadow-none" data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content=" &lt;ul class=&quot;list-inline mb-0&quot;&gt;
-                    &lt;li class=&quot;list-inline-item&quot;&gt;
-                      &lt;a href=&quot;#&quot; class=&quot;text-muted fs-15 hover-dark lh-1 px-2&quot;&gt;&lt;i
-                                                        class=&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class=&quot;list-inline-item &quot;&gt;
-                      &lt;a href=&quot;#&quot; class=&quot;text-muted fs-15 hover-dark lh-1 px-2&quot;&gt;&lt;i
-                                                        class=&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class=&quot;list-inline-item&quot;&gt;
-                      &lt;a href=&quot;#&quot; class=&quot;text-muted fs-15 hover-dark lh-1 px-2&quot;&gt;&lt;i
-                                                        class=&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class=&quot;list-inline-item&quot;&gt;
-                      &lt;a href=&quot;#&quot; class=&quot;text-muted fs-15 hover-dark lh-1 px-2&quot;&gt;&lt;i
-                                                        class=&quot;fab fa-youtube&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                    &lt;/li&gt;
-                  &lt;/ul&gt;
-                  " data-original-title="" title="">
-                  <i class="far fa-share-alt"></i>
-                </button>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" data-toggle="tooltip" title="" class="d-flex align-items-center justify-content-center w-40px h-40 bg-white text-heading bg-hover-primary hover-white rounded-circle" data-original-title="Print">
-                  <i class="far fa-print"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+           
           <div class="row galleries m-n1" bis_skin_checked="1">
             <div class="col-lg-6 p-1" bis_skin_checked="1">
               <div class="item item-size-4-3" bis_skin_checked="1">
                 <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                  <a href="/images/single-property-lg-1.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-2.jpg')">
+                  <a href="<?php echo $app_url.$main_image[0]; ?>" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('<?php echo $app_url.$main_image[0]; ?>')">
                   </a>
                 </div>
               </div>
             </div>
+            
             <div class="col-lg-6 p-1" bis_skin_checked="1">
               <div class="row m-n1" bis_skin_checked="1">
+            <?php   foreach ($multi_images as $key => $value) {  ?> 
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="/images/single-property-lg-2.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-22.jpg')">
+                      <a href="<?php echo $app_url.$value; ?>" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('<?php echo $app_url.$value; ?>')">
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 p-1" bis_skin_checked="1">
-                  <div class="item item-size-4-3" bis_skin_checked="1">
-                    <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="/images/single-property-lg-3.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-3.jpg')">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 p-1" bis_skin_checked="1">
-                  <div class="item item-size-4-3" bis_skin_checked="1">
-                    <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="/images/single-property-lg-4.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-4.jpg')">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 p-1" bis_skin_checked="1">
-                  <div class="item item-size-4-3" bis_skin_checked="1">
-                    <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
-                      <a href="/images/single-property-lg-5.jpg" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('/images/single-property-5.jpg')">
-                      </a>
-                      <a href="#" class="card-img-overlay d-flex flex-column align-items-center justify-content-center hover-image bg-dark-opacity-04">
-                        <p class="fs-48 font-weight-600 text-white lh-1 mb-4">+12</p>
-                        <p class="fs-16 font-weight-bold text-white lh-1625 text-uppercase">View
-                          more</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <?php } ?>   
+            
               </div>
             </div>
           </div>
