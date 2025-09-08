@@ -664,56 +664,6 @@ $single_page_property_data = json_decode($term_result, true);
                 </div>
               </div>
             </section>
-            <section>
-              <div class="card border-0" bis_skin_checked="1">
-                <div class="card-body p-0" bis_skin_checked="1">
-                  <h3 class="fs-16 lh-2 text-heading mb-4">Write A Review</h3>
-                  <form>
-                    <div class="form-group mb-4 d-flex justify-content-start" bis_skin_checked="1">
-                      <div class="rate-input" bis_skin_checked="1">
-                        <input type="radio" id="star5" name="rate" value="5">
-                        <label for="star5" title="text" class="mb-0 mr-1 lh-1">
-                          <i class="fas fa-star"></i>
-                        </label>
-                        <input type="radio" id="star4" name="rate" value="4">
-                        <label for="star4" title="text" class="mb-0 mr-1 lh-1">
-                          <i class="fas fa-star"></i>
-                        </label>
-                        <input type="radio" id="star3" name="rate" value="3">
-                        <label for="star3" title="text" class="mb-0 mr-1 lh-1">
-                          <i class="fas fa-star"></i>
-                        </label>
-                        <input type="radio" id="star2" name="rate" value="2">
-                        <label for="star2" title="text" class="mb-0 mr-1 lh-1">
-                          <i class="fas fa-star"></i>
-                        </label>
-                        <input type="radio" id="star1" name="rate" value="1">
-                        <label for="star1" title="text" class="mb-0 mr-1 lh-1">
-                          <i class="fas fa-star"></i>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="row" bis_skin_checked="1">
-                      <div class="col-sm-6" bis_skin_checked="1">
-                        <div class="form-group mb-4" bis_skin_checked="1">
-                          <input placeholder="Your Name" class="form-control form-control-lg border-0" type="text" name="name">
-                        </div>
-                      </div>
-                      <div class="col-sm-6" bis_skin_checked="1">
-                        <div class="form-group mb-4" bis_skin_checked="1">
-                          <input type="email" placeholder="Email" name="email" class="form-control form-control-lg border-0">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group mb-6" bis_skin_checked="1">
-                      <textarea class="form-control form-control-lg border-0" placeholder="Your Review" name="message" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-lg btn-primary px-10 mb-2">Submit</button>
-                  </form>
-                </div>
-              </div>
-            </section>
-              
             <section class="py-6 border-bottom">
               <h4 class="fs-22 text-heading mb-6">Virtual Tour</h4>
               <iframe height="430" src="https://my.matterport.com/show/?m=wWcGxjuUuSb&amp;utm_source=hit-content-embed" allowfullscreen="" class="w-100"></iframe>
