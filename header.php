@@ -217,14 +217,12 @@ $property_banner = json_decode($term_result, true);
         cursor: pointer;
       }
 
-    .home_property_link img,{
-            height: 300px;
-            object-fit: cover;
+    .home_property_link img{
+            height: 300px !important;
           }
-          .list_property_link img {
+    .list_property_link img {
             height: 250px !important;
           }
-
 
       @media screen and (max-width: 768px) {
         .home_property_link img, .list_property_link img {
