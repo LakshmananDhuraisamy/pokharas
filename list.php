@@ -1,4 +1,25 @@
-<?php include('header.php'); ?>
+<?php include('header.php'); 
+
+$term_url=$app_url.'list_page_properties'; 
+$termch = curl_init($term_url);
+curl_setopt($termch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($termch, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json',
+]);
+
+// Execute request
+$term_result = curl_exec($termch);
+if (!$term_result) {
+    die("Failed to fetch the data: " . curl_error($ch));
+}
+
+// Decode the JSON testimonial_result
+$list_page_property_data_all = json_decode($term_result, true);
+
+ 
+
+
+?>
 <main id="content">
       <section class="pb-8 page-title shadow" data-animated-id="1">
         <div class="container" bis_skin_checked="1">
@@ -20,13 +41,23 @@
                   <div class="card-body px-6 py-4">
                     <h4 class="card-title fs-16 lh-2 text-dark mb-3">Find your home</h4>
                     <form>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="key-word" class="sr-only">Key Word</label>
                         <input type="text" class="form-control form-control-lg border-0 shadow-none"
 									       id="key-word"
 									       placeholder="Enter keyword...">
+                      </div> -->
+
+                       <div class="form-group slider-range slider-range-secondary">
+                        <label for="price" class="mb-4 text-gray-light">Price Range</label>
+                        <div data-slider="true"
+									     data-slider-options='{"min":0,"max":200000,"values":[25000,75000],"type":"currency"}'></div>
+                        <div class="text-center mt-2">
+                          <input id="price" type="text" readonly
+										       class="border-0 amount text-center text-body font-weight-500">
+                        </div>
                       </div>
- 
+
  
                       <div class="form-group">
                         <label for="status" class="sr-only">Status</label>
@@ -37,15 +68,7 @@
                         </select>
                       </div>
                       
-                      <div class="form-group slider-range slider-range-secondary">
-                        <label for="price" class="mb-4 text-gray-light">Price Range</label>
-                        <div data-slider="true"
-									     data-slider-options='{"min":0,"max":200000,"values":[25000,75000],"type":"currency"}'></div>
-                        <div class="text-center mt-2">
-                          <input id="price" type="text" readonly
-										       class="border-0 amount text-center text-body font-weight-500">
-                        </div>
-                      </div>
+                     
  
                       <a class="lh-17 d-inline-block" data-toggle="collapse" href="#other-feature"
 								   role="button"
@@ -186,7 +209,7 @@
                           </div>
                         </div>
                       </div>
-                      <?php } ?> 
+                      <?php if ($key==4){ break; } } ?> 
                       
                     </div>
                   </div>
@@ -220,73 +243,22 @@
               </div>
               <div class="row" bis_skin_checked="1">
                   
-                  <?php foreach ($property_data as $key =>  $row){ ?>
-                <div class="col-md-6 mb-6" bis_skin_checked="1">
+                  <?php foreach ($list_page_property_data_all as $key =>  $row){ ?>
+                <div class="col-md-4 mb-6  col-6 list_property_link" data-id="<?php echo $row['nid']; ?>"   bis_skin_checked="1">
                   <div class="card border-0 fadeInUp animated" data-animate="fadeInUp" bis_skin_checked="1">
-                    <div class="position-relative hover-change-image bg-hover-overlay rounded-lg card-img" bis_skin_checked="1">
-
+                    <div class="position-relative hover-change-image bg-hover-overlay rounded-lg card-img" bis_skin_checked="1"> 
                      <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">                      
-                      
-                     <div class="card-img-overlay d-flex flex-column" bis_skin_checked="1">
-                        <div bis_skin_checked="1"><span class="badge badge-primary">For Sale</span></div>
-                        <div class="mt-auto d-flex hover-image" bis_skin_checked="1">
-                          <ul class="list-inline mb-0 d-flex align-items-end mr-auto">
-                            <li class="list-inline-item mr-2" data-toggle="tooltip" title="" data-original-title="9 Images">
-                              <a href="#" class="text-white hover-primary">
-                                <i class="far fa-images"></i><span class="pl-1">9</span>
-                              </a>
-                            </li>
-                            <li class="list-inline-item" data-toggle="tooltip" title="" data-original-title="2 Video">
-                              <a href="#" class="text-white hover-primary">
-                                <i class="far fa-play-circle"></i><span class="pl-1">2</span>
-                              </a>
-                            </li>
-                          </ul>
-                          <ul class="list-inline mb-0 d-flex align-items-end mr-n3">
-                            <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="" data-original-title="Wishlist">
-                              <a href="#" class="text-white fs-20 hover-primary">
-                                <i class="far fa-heart"></i>
-                              </a>
-                            </li>
-                            <li class="list-inline-item mr-3 h-32" data-toggle="tooltip" title="" data-original-title="Compare">
-                              <a href="#" class="text-white fs-20 hover-primary">
-                                <i class="fas fa-exchange-alt"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
                     </div>
+ 
                     <div class="card-body pt-3 px-0 pb-1" bis_skin_checked="1">
                       <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary"><?php echo $row['title']; ?> </a>
                       </h2>
-                      <p class="font-weight-500 text-gray-light mb-0">1421 , Nepal</p>
+                      <!-- <p class="font-weight-500 text-gray-light mb-0">1421 , Nepal</p> -->
                       <p class="fs-17 font-weight-bold text-heading mb-0 lh-16">
-                        <?php echo $row['field_expected_price']; ?>  NPR
+                        <?php echo $row['field_expected_price']; ?> 
                       </p>
                     </div>
-                    <div class="card-footer bg-transparent px-0 pb-0 pt-2" bis_skin_checked="1">
-                      <ul class="list-inline mb-0">
-                        <li class="list-inline-item text-gray font-weight-500 fs-13 mr-sm-7" data-toggle="tooltip" title="" data-original-title="3 Bedroom">
-                          <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                            <use xlink:href="#icon-bedroom"></use>
-                          </svg>
-                          <?php echo $row['field_bhk_type']; ?> 
-                        </li>
-                        <li class="list-inline-item text-gray font-weight-500 fs-13 mr-sm-7" data-toggle="tooltip" title="" data-original-title="3 Bathrooms">
-                          <svg class="icon icon-shower fs-18 text-primary mr-1">
-                            <use xlink:href="#icon-shower"></use>
-                          </svg>
-                          3 Ba
-                        </li>
-                        <li class="list-inline-item text-gray font-weight-500 fs-13" data-toggle="tooltip" title="" data-original-title="Size">
-                          <svg class="icon icon-square fs-18 text-primary mr-1">
-                            <use xlink:href="#icon-square"></use>
-                          </svg>
-                          <?php echo $row['field_built_up_area_in_sq_ft_sq']; ?>  Sq.Ft
-                        </li>
-                      </ul>
-                    </div>
+                     
                   </div>
                 </div>
                   

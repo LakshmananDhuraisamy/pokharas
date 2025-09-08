@@ -259,7 +259,7 @@
 
     <script>
       jQuery(document).ready(function($) {
-        $('.home_property_link').on('click', function() {
+        $('.home_property_link, .list_property_link').on('click', function() {
           var property_id = $(this).data('id');
           if(property_id) {
             window.location.href = 'property/' + property_id;

@@ -126,7 +126,6 @@ if (!$term_result) {
 // Decode the JSON testimonial_result
 $property_banner = json_decode($term_result, true);
  
-  
 ?>
 
 <!doctype html>
@@ -214,33 +213,36 @@ $property_banner = json_decode($term_result, true);
     </header>
 
     <style>
-      .home_property_link {
+      .home_property_link, .list_property_link {
         cursor: pointer;
       }
 
-    .home_property_link img {
+    .home_property_link img,{
             height: 300px;
             object-fit: cover;
           }
+          .list_property_link img {
+            height: 250px !important;
+          }
+
 
       @media screen and (max-width: 768px) {
-        .home_property_link img {
+        .home_property_link img, .list_property_link img {
           height: 200px !important;
         }
-        .home_property_link  .list-inline{
+        .home_property_link  .list-inline, .list_property_link  .list-inline {
           display: none !important;
         }
 
-        .home_property_link  .card-img-overlay  p{
+        .home_property_link  .card-img-overlay  p, .list_property_link  .card-img-overlay  p{
           font-size: 12px !important;
         }
-        .home_property_link  .card-img-overlay  h4 a{
+        .home_property_link  .card-img-overlay  h4 a, .list_property_link  .card-img-overlay  h4 a{
           font-size: 10px !important;
         }
-         .home_property_link  .card-img-overlay .border-top {
+         .home_property_link  .card-img-overlay .border-top, .list_property_link  .card-img-overlay .border-top{
           border-top : 0px solid #fff !important;
         }
- 
-    
+     
       }
     </style>
