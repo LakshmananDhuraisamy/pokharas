@@ -507,7 +507,6 @@ $single_page_property_data = json_decode($term_result, true);
                         is second to none.</p>
                       <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
                         <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                        <a href="#" class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
                       </div>
                     </div>
                   </div>
@@ -544,7 +543,6 @@ $single_page_property_data = json_decode($term_result, true);
                         is second to none.</p>
                       <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
                         <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                        <a href="#" class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
                       </div>
                     </div>
                   </div>
@@ -581,7 +579,6 @@ $single_page_property_data = json_decode($term_result, true);
                         is second to none.</p>
                       <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
                         <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                        <a href="#" class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
                       </div>
                     </div>
                   </div>
@@ -618,7 +615,6 @@ $single_page_property_data = json_decode($term_result, true);
                         is second to none.</p>
                       <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
                         <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                        <a href="#" class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
                       </div>
                     </div>
                   </div>
@@ -657,7 +653,6 @@ $single_page_property_data = json_decode($term_result, true);
                         is second to none.</p>
                       <div class="d-flex justify-content-sm-start justify-content-center" bis_skin_checked="1">
                         <p class="mb-0 text-muted fs-13 lh-1">02 Dec 2020 at 2:40pm</p>
-                        <a href="#" class="mb-0 text-heading border-left border-dark hover-primary lh-1 ml-2 pl-2">Reply</a>
                       </div>
                     </div>
                   </div>
