@@ -15,10 +15,6 @@ if (!$term_result) {
 
 // Decode the JSON testimonial_result
 $list_page_property_data_all = json_decode($term_result, true);
-
- 
-
-
 ?>
 <main id="content">
       <section class="pb-8 page-title shadow" data-animated-id="1">

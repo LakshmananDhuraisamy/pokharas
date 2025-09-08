@@ -1,4 +1,23 @@
-<?php include('header.php'); ?>
+<?php include('header.php');  
+
+   $requestUri = $_SERVER['REQUEST_URI'];
+    $explode_pro = explode('/', $requestUri);
+ $term_url=$app_url.'single_property_data/'.$explode_pro[2]; 
+$termch = curl_init($term_url);
+curl_setopt($termch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($termch, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json',
+]);
+
+// Execute request
+$term_result = curl_exec($termch);
+if (!$term_result) {
+    die("Failed to fetch the data: " . curl_error($ch));
+}
+
+// Decode the JSON testimonial_result
+$single_page_property_data = json_decode($term_result, true);
+?>
 
 <main id="content">
       <section data-animated-id="1">
@@ -11,7 +30,7 @@
               <li class="breadcrumb-item fs-12 letter-spacing-087">
                 <a href="listing-grid-with-left-filter.html">Listing</a>
               </li>
-              <li class="breadcrumb-item fs-12 letter-spacing-087 active">Villa on Hollywood Boulevard</li>
+              <li class="breadcrumb-item fs-12 letter-spacing-087 active"><?php echo $single_page_property_data[0]['title'] ?></li>
             </ol>
           </nav>
         </div>
@@ -121,7 +140,7 @@
               </ul>
               <div class="d-sm-flex justify-content-sm-between" bis_skin_checked="1">
                 <div bis_skin_checked="1">
-                  <h2 class="fs-35 font-weight-600 lh-15 text-heading">Villa on Hollywood Boulevard</h2>
+                  <h2 class="fs-35 font-weight-600 lh-15 text-heading"><?php echo $single_page_property_data[0]['title'] ?></h2>
                   <p class="mb-0"><i class="fal fa-map-marker-alt mr-2"></i>398 Pete Pascale Pl, New York</p>
                 </div>
                 <div class="mt-2 text-lg-right" bis_skin_checked="1">
@@ -139,115 +158,7 @@
                 ut eu sem. Nibh mauris cursus mattis molestie a
                 iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.</p>
             </section>
-            <section class="pt-6 border-bottom">
-              <h4 class="fs-22 text-heading mb-6">Facts and Features</h4>
-              <div class="row" bis_skin_checked="1">
-                <div class="col-lg-3 col-sm-4 mb-6" bis_skin_checked="1">
-                  <div class="media" bis_skin_checked="1">
-                    <div class="p-2 shadow-xxs-1 rounded-lg mr-2" bis_skin_checked="1">
-                      <svg class="icon icon-family fs-32 text-primary">
-                        <use xlink:href="#icon-family"></use>
-                      </svg>
-                    </div>
-                    <div class="media-body" bis_skin_checked="1">
-                      <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">Type</h5>
-                      <p class="mb-0 fs-13 font-weight-bold text-heading">Single Family</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-4 mb-6" bis_skin_checked="1">
-                  <div class="media" bis_skin_checked="1">
-                    <div class="p-2 shadow-xxs-1 rounded-lg mr-2" bis_skin_checked="1">
-                      <svg class="icon icon-year fs-32 text-primary">
-                        <use xlink:href="#icon-year"></use>
-                      </svg>
-                    </div>
-                    <div class="media-body" bis_skin_checked="1">
-                      <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">year built</h5>
-                      <p class="mb-0 fs-13 font-weight-bold text-heading">2020</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-4 mb-6" bis_skin_checked="1">
-                  <div class="media" bis_skin_checked="1">
-                    <div class="p-2 shadow-xxs-1 rounded-lg mr-2" bis_skin_checked="1">
-                      <svg class="icon icon-heating fs-32 text-primary">
-                        <use xlink:href="#icon-heating"></use>
-                      </svg>
-                    </div>
-                    <div class="media-body" bis_skin_checked="1">
-                      <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">heating</h5>
-                      <p class="mb-0 fs-13 font-weight-bold text-heading">Radiant</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-4 mb-6" bis_skin_checked="1">
-                  <div class="media" bis_skin_checked="1">
-                    <div class="p-2 shadow-xxs-1 rounded-lg mr-2" bis_skin_checked="1">
-                      <svg class="icon icon-price fs-32 text-primary">
-                        <use xlink:href="#icon-price"></use>
-                      </svg>
-                    </div>
-                    <div class="media-body" bis_skin_checked="1">
-                      <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">SQFT</h5>
-                      <p class="mb-0 fs-13 font-weight-bold text-heading">979.0</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-4 mb-6" bis_skin_checked="1">
-                  <div class="media" bis_skin_checked="1">
-                    <div class="p-2 shadow-xxs-1 rounded-lg mr-2" bis_skin_checked="1">
-                      <svg class="icon icon-bedroom fs-32 text-primary">
-                        <use xlink:href="#icon-bedroom"></use>
-                      </svg>
-                    </div>
-                    <div class="media-body" bis_skin_checked="1">
-                      <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">Bedrooms</h5>
-                      <p class="mb-0 fs-13 font-weight-bold text-heading">3</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-4 mb-6" bis_skin_checked="1">
-                  <div class="media" bis_skin_checked="1">
-                    <div class="p-2 shadow-xxs-1 rounded-lg mr-2" bis_skin_checked="1">
-                      <svg class="icon icon-sofa fs-32 text-primary">
-                        <use xlink:href="#icon-sofa"></use>
-                      </svg>
-                    </div>
-                    <div class="media-body" bis_skin_checked="1">
-                      <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">bathrooms</h5>
-                      <p class="mb-0 fs-13 font-weight-bold text-heading">2</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-4 mb-6" bis_skin_checked="1">
-                  <div class="media" bis_skin_checked="1">
-                    <div class="p-2 shadow-xxs-1 rounded-lg mr-2" bis_skin_checked="1">
-                      <svg class="icon icon-Garage fs-32 text-primary">
-                        <use xlink:href="#icon-Garage"></use>
-                      </svg>
-                    </div>
-                    <div class="media-body" bis_skin_checked="1">
-                      <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">GARAGE</h5>
-                      <p class="mb-0 fs-13 font-weight-bold text-heading">1</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-4 mb-6" bis_skin_checked="1">
-                  <div class="media" bis_skin_checked="1">
-                    <div class="p-2 shadow-xxs-1 rounded-lg mr-2" bis_skin_checked="1">
-                      <svg class="icon icon-status fs-32 text-primary">
-                        <use xlink:href="#icon-status"></use>
-                      </svg>
-                    </div>
-                    <div class="media-body" bis_skin_checked="1">
-                      <h5 class="my-1 fs-14 text-uppercase letter-spacing-093 font-weight-normal">Status</h5>
-                      <p class="mb-0 fs-13 font-weight-bold text-heading">Active</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+             
             <section class="pt-6 border-bottom pb-4">
               <h4 class="fs-22 text-heading mb-4">Additional Details</h4>
               <div class="row" bis_skin_checked="1">
