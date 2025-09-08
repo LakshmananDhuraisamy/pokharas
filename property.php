@@ -103,7 +103,7 @@ $property_reviews = json_decode($term_result, true);
               <ul class="list-inline d-sm-flex align-items-sm-center mb-2">
                 <li class="list-inline-item badge badge-orange mr-2">Featured</li>
                 <li class="list-inline-item badge badge-primary mr-3">For Sale</li>
-                <li class="list-inline-item mr-2 mt-2 mt-sm-0"><i class="fal fa-clock mr-1"></i>2 months ago
+                <li class="list-inline-item mr-2 mt-2 mt-sm-0"><i class="fal fa-clock mr-1"></i><?php echo $single_page_property_data[0]['created']; ?> 
                 </li>
                 <li class="list-inline-item mt-2 mt-sm-0"><i class="fal fa-eye mr-1"></i>1039 views</li>
               </ul>
