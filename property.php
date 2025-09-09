@@ -1,8 +1,9 @@
 <?php include('header.php');  
 
-   $requestUri = $_SERVER['REQUEST_URI'];
-    $explode_pro = explode('/', $requestUri);
- $term_url=$app_url.'single_property_data/'.$explode_pro[2]; 
+
+$requestUri = $_SERVER['REQUEST_URI'];
+$explode_pro = explode('/', $requestUri);
+$term_url=$app_url.'single_property_data/'.$explode_pro[2]; 
 $termch = curl_init($term_url);
 curl_setopt($termch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($termch, CURLOPT_HTTPHEADER, [
@@ -37,7 +38,9 @@ if (!$term_result) {
 // Decode the JSON testimonial_result
 $property_reviews = json_decode($term_result, true);
 
-
+$api_url = $app_url."api/property/$explode_pro[2]/count-view";
+$response = file_get_contents($api_url);
+$property_count = json_decode($response, true);
 ?>
 <style>
 .sticky-area-wrap{
@@ -54,7 +57,7 @@ $property_reviews = json_decode($term_result, true);
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb pt-lg-0 pb-3">
               <li class="breadcrumb-item fs-12 letter-spacing-087">
-                <a href=".">Home</a>
+                <a href="/">Home </a>
               </li>
               <li class="breadcrumb-item fs-12 letter-spacing-087">
                 <a href="listing-grid-with-left-filter.html">Listing</a>
@@ -117,7 +120,7 @@ $property_reviews = json_decode($term_result, true);
                 <li class="list-inline-item badge badge-primary mr-3">For Sale</li>
                 <li class="list-inline-item mr-2 mt-2 mt-sm-0"><i class="fal fa-clock mr-1"></i><?php echo $single_page_property_data[0]['created']; ?> 
                 </li>
-                <li class="list-inline-item mt-2 mt-sm-0"><i class="fal fa-eye mr-1"></i>1039 views</li>
+                <li class="list-inline-item mt-2 mt-sm-0"><i class="fal fa-eye mr-1"></i><?php echo $property_count['view_count']; ?> views</li>
               </ul>
               <div class="d-sm-flex justify-content-sm-between" bis_skin_checked="1">
                 <div bis_skin_checked="1">
