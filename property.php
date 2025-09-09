@@ -168,9 +168,9 @@ $property_reviews = json_decode($term_result, true);
               </div>
             </section>
         <?php $property_amenities = explode(',', $single_page_property_data[0]['field_property_amenities']);
-            if(!empty($property_amenities)){  ?>
+            if(!empty($single_page_property_data[0]['field_property_amenities'])){  ?>
             <section class="pt-6 border-bottom pb-4">
-              <h4 class="fs-22 text-heading mb-4">Offices Amenities</h4>
+              <h4 class="fs-22 text-heading mb-4">Property Amenities</h4>
               <ul class="list-unstyled mb-0 row no-gutters"> 
             <?php foreach ($property_amenities as $key => $value) {   ?> 
                 <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>
