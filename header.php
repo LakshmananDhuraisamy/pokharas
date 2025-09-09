@@ -165,7 +165,7 @@ $property_banner = json_decode($term_result, true);
           <nav class="navbar navbar-expand-xl bg-transparent px-0 w-100">
             <a class="navbar-brand order-0 order-xl-1 mx-xl-auto"
                    href="/index">
-               Nepal Properties
+               Pokharas.com
             </a>
            
             <div class="d-flex d-xl-none order-2">
@@ -186,8 +186,7 @@ $property_banner = json_decode($term_result, true);
                   <a class="nav-link p-0"
            href="/index"  >
                     Home
-                  </a>
-                 
+                  </a>                 
                 </li>
              
               </ul>
