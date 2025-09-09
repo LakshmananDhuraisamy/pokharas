@@ -223,6 +223,7 @@ $property_banner = json_decode($term_result, true);
             height: 250px !important;
           }
 
+    
       @media screen and (max-width: 768px) {
         .home_property_link img, .list_property_link img {
           height: 200px !important;
@@ -240,6 +241,9 @@ $property_banner = json_decode($term_result, true);
          .home_property_link  .card-img-overlay .border-top, .list_property_link  .card-img-overlay .border-top{
           border-top : 0px solid #fff !important;
         }
-     
+      .navbar-light .navbar-brand {
+          color: #fff !important;
+      }
+
       }
     </style>
