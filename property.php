@@ -109,23 +109,17 @@ $property_reviews = json_decode($term_result, true);
               </ul>
               <div class="d-sm-flex justify-content-sm-between" bis_skin_checked="1">
                 <div bis_skin_checked="1">
-                  <h2 class="fs-35 font-weight-600 lh-15 text-heading"><?php echo $single_page_property_data[0]['title'] ?></h2>
-                  <p class="mb-0"><i class="fal fa-map-marker-alt mr-2"></i>398 Pete Pascale Pl, New York</p>
+                  <h2 class="fs-35 font-weight-600 lh-15 text-heading"><?php echo $single_page_property_data[0]['title']; ?></h2>
+                  <p class="mb-0"><i class="fal fa-map-marker-alt mr-2"></i><?php echo $single_page_property_data[0]['field_address']; ?></p>
                 </div>
                 <div class="mt-2 text-lg-right" bis_skin_checked="1">
-                  <p class="fs-22 text-heading font-weight-bold mb-0">$1.250.000</p>
-                  <p class="mb-0">$9350/SqFt</p>
+                  <p class="fs-22 text-heading font-weight-bold mb-0"><?php echo $single_page_property_data[0]['field_expected_price']; ?> </p>
+                  <p class="mb-0"><?php echo $single_page_property_data[0]['field_built_up_area_in_sq_ft_sq']; ?> </p>
                 </div>
               </div>
               <h4 class="fs-22 text-heading mt-6 mb-2">Description</h4>
               <p class="mb-0 lh-214">Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus
-                scelerisque eleifend donec.
-                Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper
-                quis lectus. Turpis in eu mi bibendum neque
-                egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim
-                sodales
-                ut eu sem. Nibh mauris cursus mattis molestie a
-                iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.</p>
+                scelerisque eleifend donec.</p>
             </section>
              
             <section class="pt-6 border-bottom pb-4">
@@ -133,19 +127,19 @@ $property_reviews = json_decode($term_result, true);
               <div class="row" bis_skin_checked="1">
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Property ID</dt>
-                  <dd>AD-2910</dd>
+                  <dd><?php echo $single_page_property_data[0]['nid']; ?></dd>
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Price</dt>
-                  <dd>$890.000</dd>
+                  <dd><?php echo $single_page_property_data[0]['field_expected_price']; ?></dd>
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Property type</dt>
-                  <dd>Apartment, bar, cafe, villa</dd>
+                  <dd><?php echo $single_page_property_data[0]['field_listing_type']; ?></dd>
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Property status</dt>
-                  <dd>For Sale</dd>
+                  <dd>For <?php echo $single_page_property_data[0]['field_listing_type']; ?></dd>
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Rooms</dt>
@@ -157,27 +151,15 @@ $property_reviews = json_decode($term_result, true);
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Size</dt>
-                  <dd>900SqFt</dd>
+                  <dd><?php echo $single_page_property_data[0]['field_built_up_area_in_sq_ft_sq']; ?></dd>
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Bathrooms</dt>
                   <dd>2</dd>
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
-                  <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Garage</dt>
-                  <dd>1</dd>
-                </dl>
-                <dl class="col-sm-6 mb-0 d-flex">
-                  <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Bathrooms</dt>
-                  <dd>2000 SqFt</dd>
-                </dl>
-                <dl class="col-sm-6 mb-0 d-flex">
-                  <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Garage size</dt>
-                  <dd>50 SqFt</dd>
-                </dl>
-                <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Year build</dt>
-                  <dd>2020</dd>
+                  <dd><?php echo $single_page_property_data[0]['field_year_of_build']; ?></dd> 
                 </dl>
                 <dl class="offset-sm-6 col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Label</dt>
@@ -213,7 +195,9 @@ $property_reviews = json_decode($term_result, true);
                 <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dishwasher
                 </li>
               </ul>
-            </section>
+            </section> 
+            <?php  $floorplan = $single_page_property_data[0]['field_floor_plan_document'];
+          if(!empty($floorplan)){ ?>
             <section class="py-6">
               <h4 class="fs-22 text-heading mb-6">Floor Plans</h4>
               <div class="accordion accordion-03 mb-3" id="accordion-01" bis_skin_checked="1">
@@ -235,45 +219,9 @@ $property_reviews = json_decode($term_result, true);
                   </div>
                 </div>
               </div>
-              <div class="accordion accordion-03 mb-3" id="accordion-02" bis_skin_checked="1">
-                <div class="card border-0 shadow-xxs-2" bis_skin_checked="1">
-                  <div class="card-header bg-gray-01 border-gray border-0 p-0" id="floor-plans-02" bis_skin_checked="1">
-                    <div class="heading d-flex justify-content-between align-items-center px-6 collapsed " data-toggle="collapse" data-target="#collapse-02" aria-expanded="true" aria-controls="collapse-02" role="button" bis_skin_checked="1">
-                      <h2 class="mb-0 fs-16 text-heading font-weight-500 py-4 lh-13">Second Floor</h2>
-                      <ul class="list-inline mb-0 d-none d-sm-block pr-2">
-                        <li class=" list-inline-item text-muted mr-4">Beds : <span class="font-weight-500 text-heading">2</span></li>
-                        <li class=" list-inline-item text-muted mr-4">Bath : <span class="font-weight-500 text-heading">2</span></li>
-                        <li class=" list-inline-item text-muted mr-4">Sqft : <span class="font-weight-500 text-heading">900</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div id="collapse-02" class="collapse " aria-labelledby="floor-plans-02" data-parent="#accordion-02" bis_skin_checked="1">
-                    <div class="card-body card-body col-sm-6 offset-sm-3 mb-3" bis_skin_checked="1">
-                      <img src="/images/single-detail-property-01.jpg" class="card-img" alt="Floor Plans">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion accordion-03 mb-3" id="accordion-03" bis_skin_checked="1">
-                <div class="card border-0 shadow-xxs-2" bis_skin_checked="1">
-                  <div class="card-header bg-gray-01 border-gray border-0 p-0" id="floor-plans-03" bis_skin_checked="1">
-                    <div class="heading d-flex justify-content-between align-items-center px-6 collapsed " data-toggle="collapse" data-target="#collapse-03" aria-expanded="true" aria-controls="collapse-03" role="button" bis_skin_checked="1">
-                      <h2 class="mb-0 fs-16 text-heading font-weight-500 py-4 lh-13">Third Floor</h2>
-                      <ul class="list-inline mb-0 d-none d-sm-block pr-2">
-                        <li class=" list-inline-item text-muted mr-4">Beds : <span class="font-weight-500 text-heading">2</span></li>
-                        <li class=" list-inline-item text-muted mr-4">Bath : <span class="font-weight-500 text-heading">2</span></li>
-                        <li class=" list-inline-item text-muted mr-4">Sqft : <span class="font-weight-500 text-heading">900</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div id="collapse-03" class="collapse " aria-labelledby="floor-plans-03" data-parent="#accordion-03" bis_skin_checked="1">
-                    <div class="card-body card-body col-sm-6 offset-sm-3 mb-3" bis_skin_checked="1">
-                      <img src="/images/single-detail-property-01.jpg" class="card-img" alt="Floor Plans">
-                    </div>
-                  </div>
-                </div>
-              </div>
             </section>
+            <?php } ?>
+
             <section>
               <h4 class="fs-22 text-heading lh-15 mb-5 pt-3">Rating &amp; Reviews</h4>
               <div class="card border-0 mb-4" bis_skin_checked="1">
@@ -486,7 +434,14 @@ $property_reviews = json_decode($term_result, true);
             <section class="py-6 border-bottom">
               <h4 class="fs-22 text-heading mb-6">Location</h4>
               <div class="position-relative" bis_skin_checked="1">
+          <?php 
+          $field_property_location = $single_page_property_data[0]['field_year_of_build'];
+          if(!empty($field_property_location)){ ?>
+           <iframe src="<?php echo $field_property_location; ?> " width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <?php }else{ ?> 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112488.38821620736!2d83.9566183!3d28.2297224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara%2C%20Nepal!5e0!3m2!1sen!2sin!4v1757329116001!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+           <?php } ?>
+
             </div>
             </section>
               
