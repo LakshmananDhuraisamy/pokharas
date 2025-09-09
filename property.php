@@ -48,7 +48,6 @@ $property_count = json_decode($response, true);
     border-radius: 90px !important;
 }
 </style>
-
 <main id="content">
 <br><br><br> <br>
       <div class="position-relative">
