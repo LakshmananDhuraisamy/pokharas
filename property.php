@@ -163,39 +163,24 @@ $property_reviews = json_decode($term_result, true);
                 </dl>
                 <dl class="offset-sm-6 col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Label</dt>
-                  <dd>Bestseller</dd>
+                  <dd><?php echo $single_page_property_data[0]['field_promotion']; ?>  </dd>
                 </dl>
               </div>
             </section>
+        <?php $property_amenities = explode(',', $single_page_property_data[0]['field_property_amenities']);
+            if(!empty($property_amenities)){  ?>
             <section class="pt-6 border-bottom pb-4">
               <h4 class="fs-22 text-heading mb-4">Offices Amenities</h4>
-              <ul class="list-unstyled mb-0 row no-gutters">
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Balcony
+              <ul class="list-unstyled mb-0 row no-gutters"> 
+            <?php foreach ($property_amenities as $key => $value) {   ?> 
+                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>
+                <?php echo $value; ?>
                 </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Fireplace
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Balcony
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Fireplace
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Basement
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Cooling
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Basement
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Cooling
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dining room
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dishwasher
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dining room
-                </li>
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>Dishwasher
-                </li>
+              <?php } ?>
               </ul>
             </section> 
+            <?php } ?> 
+             
             <?php  $floorplan = $single_page_property_data[0]['field_floor_plan_document'];
           if(!empty($floorplan)){ ?>
             <section class="py-6">
