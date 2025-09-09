@@ -289,13 +289,14 @@
           </div>
         </div>
       </section>
-      <section class="py-lg-12 my-lg-1 py-11">
+
+      <section class="py-lg-12 my-lg-1 py-11" style="display: none;">
         <div class="container container-xxl">
           <div class="row">
             <div class="col-md-6">
               <h2 class="text-heading">Properties For Sale</h2>
               <span class="heading-divider"></span>
-              <p class="mb-7">Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit</p>
+              <!-- <p class="mb-7">Lorem ipsum dolor sit amet, consec tetur cing elit. Suspe ndisse suscipit</p> -->
             </div>
             <div class="col-md-6 text-md-right">
               <a href="list"
@@ -368,7 +369,7 @@
           </div>
         </div>
       </section>
-      <section class="pb-lg-13 pb-11">
+      <section class="pb-lg-13 pb-11" style="display: none;">
         <div class="container container-xxl">
           <div class="row">
             <div class="col-md-6">
