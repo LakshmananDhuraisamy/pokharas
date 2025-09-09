@@ -78,7 +78,19 @@ $property_reviews = json_decode($term_result, true);
             
             <div class="col-lg-6 p-1" bis_skin_checked="1">
               <div class="row m-n1" bis_skin_checked="1">
-            <?php   foreach ($multi_images as $key => $value) {  ?> 
+                <?php if(!empty($main_image[1])){  ?>
+            <div class="col-md-6 p-1" bis_skin_checked="1">
+                  <div class="item item-size-4-3" bis_skin_checked="1">
+                    <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
+                      <a href="<?php echo $app_url.$main_image[1]; ?>" class="card-img" data-gtf-mfp="true" data-gallery-id="01" style="background-image:url('<?php echo $app_url.$main_image[1]; ?>')">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <?php } ?>
+              <?php
+              if(!empty($single_page_property_data[0]['field_images'])){
+              foreach ($multi_images as $key => $value) {  ?> 
                 <div class="col-md-6 p-1" bis_skin_checked="1">
                   <div class="item item-size-4-3" bis_skin_checked="1">
                     <div class="card p-0 hover-zoom-in" bis_skin_checked="1">
@@ -87,7 +99,7 @@ $property_reviews = json_decode($term_result, true);
                     </div>
                   </div>
                 </div>
-            <?php } ?>   
+            <?php } } ?>   
 
               </div>
             </div>
