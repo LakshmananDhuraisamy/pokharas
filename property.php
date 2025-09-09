@@ -400,11 +400,19 @@ for ($star = 5; $star >= 1; $star--) {  ?>
                 <ul class="nav nav-tabs d-flex" role="tablist">
                   <li class="nav-item">
                     <a class="nav-link active px-3" data-toggle="tab" href="#schedule" role="tab" aria-selected="true">Schedule
-                      A Tour</a>
+                      to Visit</a>
                   </li>
                 </ul>
                 <div class="card-body px-sm-6 shadow-xxs-2 pb-5 pt-0" bis_skin_checked="1">
-                  <form>
+                   <div class="media mt-5 align-items-center mb-4" bis_skin_checked="1">
+                    <img src="/images/tarun-se.png" class="mr-3" alt="Oliver Beddows">
+                    <div class="media-body" bis_skin_checked="1">
+                      <h5 class="mb-0 fs-16 text-dark ">TARUN BHUJEL</h5>
+                      <p class="mb-0">Sales Executive</p>
+                      <p class="mb-0"><i class="fal fa-phone fs-15 font-weight-light text-primary mr-1"></i> <a href="tel:+9779705906441" class="">+977 970-5906441</a> </p> 
+                    </div>
+                  </div>
+                <form>
                     <div class="tab-content pt-1 pb-0 px-0 shadow-none" bis_skin_checked="1">
                       <div class="tab-pane fade show active" id="schedule" role="tabpanel" bis_skin_checked="1">
                         <div class="slick-slider calendar arrow-hide-disable mx-n1 slick-initialized" data-slick-options="{&quot;slidesToShow&quot;: 5, &quot;autoplay&quot;:false,&quot;dots&quot;:false}" bis_skin_checked="1"><div class="slick-prev slick-arrow slick-disabled" aria-label="Previous" aria-disabled="true" style="display: block;" bis_skin_checked="1"><i class="far fa-angle-left"></i></div>
