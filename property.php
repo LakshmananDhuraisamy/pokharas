@@ -271,11 +271,16 @@ $property_count = json_decode($response, true);
                         </h5>
                         <p class="fs-40 text-heading font-weight-bold mb-6 lh-1"><?php echo $average_count =  round($average, 1); ?> <span class="fs-18 text-gray-light font-weight-normal">/5</span></p>
                         <ul class="list-inline">
-                          <?php for ($i=0; $i < $average_count; $i++) {  ?> 
+<?php for ($i=1; $i <= 5; $i++) {  
+                          if ($average_count >= $i) {  ?> 
                           <li class="list-inline-item bg-warning text-white w-46px h-46 rounded-lg d-inline-flex align-items-center justify-content-center fs-18 mb-1">
                             <i class="fas fa-star"></i>
                           </li>
-                          <?php } ?>
+                          <?php }else{ ?> 
+                          <li class="list-inline-item bg-gray-04 text-white w-46px h-46 rounded-lg d-inline-flex align-items-center justify-content-center fs-18 mb-1">
+                            <i class="fas fa-star"></i>
+                          </li>
+                        <?php } } ?> 
                         </ul>
                       </div>
                     </div>
@@ -287,14 +292,12 @@ $property_count = json_decode($response, true);
 <?php 
 for ($star = 5; $star >= 1; $star--) {  ?> 
                       <div class="d-flex align-items-center mx-n1" bis_skin_checked="1">
-                        <ul class="list-inline d-flex px-1 mb-0">
-                          <?php for ($i=0; $i < 5; $i++) {  
-                            if($star >=$i){ ?> 
-                            <li class="list-inline-item text-warning mr-1">
+                        <ul class="list-inline d-flex px-1 mb-0"><?php for ($i=1; $i <= 5; $i++) {   if($star >=$i){ ?>
+                          <li class="list-inline-item text-warning mr-1">
                             <i class="fas fa-star"></i>
                           </li>
                             <?php }else{ ?> 
-                              <li class="list-inline-item text-border mr-1">
+                           <li class="list-inline-item text-border mr-1">
                             <i class="fas fa-star"></i>
                           </li>
                           <?php }
@@ -302,10 +305,10 @@ for ($star = 5; $star >= 1; $star--) {  ?>
                         </ul>
                         <div class="d-block w-100 px-1" bis_skin_checked="1">
                           <div class="progress rating-progress" bis_skin_checked="1">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $percentages[$star]; ?>%" aria-valuenow="<?php echo $percentages[$star]; ?>" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $percentages[$star];?>%" aria-valuenow="<?php echo $percentages[$star]; ?>" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
                           </div>
                         </div>
-                        <div class="text-muted px-1" bis_skin_checked="1"><?php echo $percentages[$star]; ?> %</div>
+                        <div class="text-muted px-1" bis_skin_checked="1"><?php echo $percentages[$star]; ?>%</div>
                       </div>
 <?php    // echo "{$star} star: {$percentages[$star]}% ({$breakdown[$star]} reviews)\n"; 
   } ?> 
