@@ -37,6 +37,18 @@ if (!$term_result) {
 
 // Decode the JSON testimonial_result
 $property_reviews = json_decode($term_result, true);
+ 
+if(count($property_reviews)>0){  
+foreach ($property_reviews as $key => $value) {   
+$ratings[]=$value['field_property_star_rating'];
+}
+} 
+
+$average = 0;
+if (count($ratings) > 0) {
+    $average = array_sum($ratings) / count($ratings);
+}
+ 
 
 $api_url = $app_url."api/property/$explode_pro[2]/count-view";
 $response = file_get_contents($api_url);
@@ -187,7 +199,7 @@ $property_count = json_decode($response, true);
               <h4 class="fs-22 text-heading mb-4">Property Amenities</h4>
               <ul class="list-unstyled mb-0 row no-gutters"> 
             <?php foreach ($property_amenities as $key => $value) {   ?> 
-                <li class="col-sm-3 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>
+                <li class="col-sm-4 col-6 mb-2"><i class="far fa-check mr-2 text-primary"></i>
                 <?php echo $value; ?>
                 </li>
               <?php } ?>
@@ -220,7 +232,7 @@ $property_count = json_decode($response, true);
               </div>
             </section>
             <?php } ?>
-
+<?php if(count($property_reviews)>0){ ?>
             <section>
               <h4 class="fs-22 text-heading lh-15 mb-5 pt-3">Rating &amp; Reviews</h4>
               <div class="card border-0 mb-4" bis_skin_checked="1">
@@ -231,23 +243,13 @@ $property_count = json_decode($response, true);
                         <h5 class="fs-16 lh-2 text-heading mb-6">
                           Avarage User Rating
                         </h5>
-                        <p class="fs-40 text-heading font-weight-bold mb-6 lh-1">4.6 <span class="fs-18 text-gray-light font-weight-normal">/5</span></p>
+                        <p class="fs-40 text-heading font-weight-bold mb-6 lh-1"><?php echo $average_count =  round($average, 1); ?> <span class="fs-18 text-gray-light font-weight-normal">/5</span></p>
                         <ul class="list-inline">
+                          <?php for ($i=0; $i < $average_count; $i++) {  ?> 
                           <li class="list-inline-item bg-warning text-white w-46px h-46 rounded-lg d-inline-flex align-items-center justify-content-center fs-18 mb-1">
                             <i class="fas fa-star"></i>
                           </li>
-                          <li class="list-inline-item bg-warning text-white w-46px h-46 rounded-lg d-inline-flex align-items-center justify-content-center fs-18 mb-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item bg-warning text-white w-46px h-46 rounded-lg d-inline-flex align-items-center justify-content-center fs-18 mb-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item bg-warning text-white w-46px h-46 rounded-lg d-inline-flex align-items-center justify-content-center fs-18 mb-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item bg-gray-04 text-white w-46px h-46 rounded-lg d-inline-flex align-items-center justify-content-center fs-18 mb-1">
-                            <i class="fas fa-star"></i>
-                          </li>
+                          <?php } ?>
                         </ul>
                       </div>
                     </div>
@@ -385,7 +387,7 @@ $property_count = json_decode($response, true);
                 </div>
               </div>
             </section>
-
+<?php } ?> 
 <?php if(count($property_reviews)>0){ ?>
             <section class="pt-5">
               <div class="card border-0 mb-4" bis_skin_checked="1">
