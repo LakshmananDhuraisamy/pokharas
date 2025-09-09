@@ -42,13 +42,39 @@ if(count($property_reviews)>0){
 foreach ($property_reviews as $key => $value) {   
 $ratings[]=$value['field_property_star_rating'];
 }
-} 
+
 
 $average = 0;
 if (count($ratings) > 0) {
     $average = array_sum($ratings) / count($ratings);
 }
- 
+
+
+// Extract ratings
+$ratings = array_column($property_reviews, 'field_property_star_rating');
+
+// Count total ratings
+$total = count($ratings);
+
+// Initialize breakdown (1–5 stars)
+$breakdown = array_fill(1, 5, 0);
+
+// Count each star
+foreach ($ratings as $star) {
+    if (isset($breakdown[$star])) {
+        $breakdown[$star]++;
+    }
+}
+
+// Calculate percentages
+$percentages = [];
+foreach ($breakdown as $star => $count) {
+    $percentages[$star] = $total > 0 ? round(($count / $total) * 100, 2) : 0;
+}
+
+
+} 
+
 
 $api_url = $app_url."api/property/$explode_pro[2]/count-view";
 $response = file_get_contents($api_url);
@@ -257,131 +283,33 @@ $property_count = json_decode($response, true);
                       <h5 class="fs-16 lh-2 text-heading mb-5">
                         Rating Breakdown
                       </h5>
+
+<?php 
+for ($star = 5; $star >= 1; $star--) {  ?> 
                       <div class="d-flex align-items-center mx-n1" bis_skin_checked="1">
                         <ul class="list-inline d-flex px-1 mb-0">
-                          <li class="list-inline-item text-warning mr-1">
+                          <?php for ($i=0; $i < 5; $i++) {  
+                            if($star >=$i){ ?> 
+                            <li class="list-inline-item text-warning mr-1">
                             <i class="fas fa-star"></i>
                           </li>
-                          <li class="list-inline-item text-warning mr-1">
+                            <?php }else{ ?> 
+                              <li class="list-inline-item text-border mr-1">
                             <i class="fas fa-star"></i>
                           </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
+                          <?php }
+                          } ?>  <br> 
                         </ul>
                         <div class="d-block w-100 px-1" bis_skin_checked="1">
                           <div class="progress rating-progress" bis_skin_checked="1">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $percentages[$star]; ?>%" aria-valuenow="<?php echo $percentages[$star]; ?>" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
                           </div>
                         </div>
-                        <div class="text-muted px-1" bis_skin_checked="1">60%</div>
+                        <div class="text-muted px-1" bis_skin_checked="1"><?php echo $percentages[$star]; ?> %</div>
                       </div>
-                      <div class="d-flex align-items-center mx-n1" bis_skin_checked="1">
-                        <ul class="list-inline d-flex px-1 mb-0">
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                        </ul>
-                        <div class="d-block w-100 px-1" bis_skin_checked="1">
-                          <div class="progress rating-progress" bis_skin_checked="1">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
-                          </div>
-                        </div>
-                        <div class="text-muted px-1" bis_skin_checked="1">40%</div>
-                      </div>
-                      <div class="d-flex align-items-center mx-n1" bis_skin_checked="1">
-                        <ul class="list-inline d-flex px-1 mb-0">
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                        </ul>
-                        <div class="d-block w-100 px-1" bis_skin_checked="1">
-                          <div class="progress rating-progress" bis_skin_checked="1">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
-                          </div>
-                        </div>
-                        <div class="text-muted px-1" bis_skin_checked="1">0%</div>
-                      </div>
-                      <div class="d-flex align-items-center mx-n1" bis_skin_checked="1">
-                        <ul class="list-inline d-flex px-1 mb-0">
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                        </ul>
-                        <div class="d-block w-100 px-1" bis_skin_checked="1">
-                          <div class="progress rating-progress" bis_skin_checked="1">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
-                          </div>
-                        </div>
-                        <div class="text-muted px-1" bis_skin_checked="1">0%</div>
-                      </div>
-                      <div class="d-flex align-items-center mx-n1" bis_skin_checked="1">
-                        <ul class="list-inline d-flex px-1 mb-0">
-                          <li class="list-inline-item text-warning mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                          <li class="list-inline-item text-border mr-1">
-                            <i class="fas fa-star"></i>
-                          </li>
-                        </ul>
-                        <div class="d-block w-100 px-1" bis_skin_checked="1">
-                          <div class="progress rating-progress" bis_skin_checked="1">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" bis_skin_checked="1"></div>
-                          </div>
-                        </div>
-                        <div class="text-muted px-1" bis_skin_checked="1">0%</div>
-                      </div>
+<?php    // echo "{$star} star: {$percentages[$star]}% ({$breakdown[$star]} reviews)\n"; 
+  } ?> 
+
                     </div>
                   </div>
                 </div>
