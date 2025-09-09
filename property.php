@@ -116,8 +116,8 @@ $property_count = json_decode($response, true);
           <article class="col-lg-8 pr-xl-7">
             <section class="pb-7 border-bottom">
               <ul class="list-inline d-sm-flex align-items-sm-center mb-2">
-                <li class="list-inline-item badge badge-orange mr-2">Featured</li>
-                <li class="list-inline-item badge badge-primary mr-3">For Sale</li>
+                <li class="list-inline-item badge badge-orange mr-2"><?php echo $single_page_property_data[0]['field_promotion']; ?></li>
+                <li class="list-inline-item badge badge-primary mr-3">For <?php echo $single_page_property_data[0]['field_listing_type']; ?></li>
                 <li class="list-inline-item mr-2 mt-2 mt-sm-0"><i class="fal fa-clock mr-1"></i><?php echo $single_page_property_data[0]['created']; ?> 
                 </li>
                 <li class="list-inline-item mt-2 mt-sm-0"><i class="fal fa-eye mr-1"></i><?php echo $property_count['view_count']; ?> views</li>
