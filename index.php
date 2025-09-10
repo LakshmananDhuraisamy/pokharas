@@ -4,7 +4,7 @@
         <div style="background-image: url('https://app.cattain.in/sites/default/files/2025-08/pokhara-full-banner.jpg')" class="py-lg-17 py-11 bg-cover">
           <div class="container mt-lg-9" data-animate="zoomIn">
             <p class="mb-5 text-white text-center fs-md-22 fs-18 font-weight-600"  style="color: #000 !important;" >Find Your Dream Apartment</p>
-            <h2 class="text-white text-center display-2 font-weight-light mb-10" style="    background-color: #c3ebff75; color: #000 !important;">Search for Pokhara's best deals.</h2>
+            <h2 class="text-white text-center display-2 font-weight-light mb-10" style="    background-color: #c3ebff75; color: #000 !important; border-radius: 50%;">Search for Pokhara's best deals.</h2>
             <div class="mxw-670 position-relative z-index-2">
               <input class="search-field" type="hidden" name="status" value="for-sale"
                        data-default-value="">
