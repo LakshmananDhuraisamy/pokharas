@@ -85,7 +85,7 @@
                       </div>
                       <div class="mt-auto px-2">
                         <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
-                        <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal" class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
+                        <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
@@ -137,7 +137,7 @@
                       </div>
                       <div class="mt-auto px-2">
                         <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
-                        <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void()" data-toggle="modal" data-target="#myModal"  class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
+                        <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void()" data-toggle="modal" data-target="#myModal1"  class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
@@ -190,7 +190,7 @@
                       </div>
                       <div class="mt-auto px-2">
                         <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
-                        <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void()" data-toggle="modal" data-target="#myModal" class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
+                        <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void()" data-toggle="modal" data-target="#myModal1" class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
@@ -324,7 +324,7 @@
                     <ul class="list-inline mb-0 hover-image text-center">
                      
                       <li class="list-inline-item">
-                        <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal" class="w-52px h-52 rounded-circle d-inline-flex align-items-center justify-content-center text-heading bg-white bg-hover-primary hover-white"
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" class="w-52px h-52 rounded-circle d-inline-flex align-items-center justify-content-center text-heading bg-white bg-hover-primary hover-white"
                                        data-toggle="tooltip" title="Submit">
                           <i class="fas fa-exchange-alt"></i>
                         </a>
@@ -402,7 +402,7 @@
                     <ul class="list-inline mb-0 hover-image text-center">
                      
                       <li class="list-inline-item">
-                        <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal" class="w-52px h-52 rounded-circle d-inline-flex align-items-center justify-content-center text-heading bg-white bg-hover-primary hover-white"
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" class="w-52px h-52 rounded-circle d-inline-flex align-items-center justify-content-center text-heading bg-white bg-hover-primary hover-white"
                                        data-toggle="tooltip" title="Compare">
                           <i class="fas fa-exchange-alt"></i>
                         </a>
