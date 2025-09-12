@@ -190,7 +190,7 @@ $list_page_property_data_all = json_decode($term_result, true);
                     <h4 class="card-title fs-16 lh-2 text-dark mb-3">Featured Properties</h4>
                     <div class="slick-slider mx-0"
 							     data-slick-options='{"slidesToShow": 1, "autoplay":true}'>
-                     <?php foreach ($property_data as $key =>  $row){ ?>
+                     <?php foreach ($list_page_property_data_all as $key =>  $row){ ?>
                       <div class="box px-0">
                         <div class="card border-0">
                          <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
@@ -200,7 +200,7 @@ $list_page_property_data_all = json_decode($term_result, true);
                               <a href="#" class="badge badge-indigo">for Rent</a>
                             </div>
                             <div class="px-2 pb-2">
-                              <a href="single-property-1.html" class="text-white"><h5
+                              <a href="/" class="text-white"><h5
 														class="card-title fs-16 lh-2 mb-0"> <?php echo $row['title']; ?></h5>
                               </a>
                               <p class="card-text text-gray-light mb-0 font-weight-500">1421, Nepal</p>
@@ -253,7 +253,7 @@ $list_page_property_data_all = json_decode($term_result, true);
                     </div>
  
                     <div class="card-body pt-3 px-0 pb-1" bis_skin_checked="1">
-                      <h2 class="fs-16 mb-1"><a href="single-property-1.html" class="text-dark hover-primary"><?php echo $row['title']; ?> </a>
+                      <h2 class="fs-16 mb-1"><a href="/" class="text-dark hover-primary"><?php echo $row['title']; ?> </a>
                       </h2>
                       <!-- <p class="font-weight-500 text-gray-light mb-0">1421 , Nepal</p> -->
                       <p class="fs-17 font-weight-bold text-heading mb-0 lh-16">

@@ -97,7 +97,7 @@ $property_count = json_decode($response, true);
                 <a href="/">Home </a>
               </li>
               <li class="breadcrumb-item fs-12 letter-spacing-087">
-                <a href="listing-grid-with-left-filter.html">Listing</a>
+                <a href="/list">Listing</a>
               </li>
               <li class="breadcrumb-item fs-12 letter-spacing-087 active"><?php echo $single_page_property_data[0]['title'] ?></li>
             </ol>
