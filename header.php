@@ -244,6 +244,9 @@ $property_banner = json_decode($term_result, true);
       .navbar-light .navbar-brand {
           color: #fff !important;
       }
+      .desktop-brs{
+        display: none !important;
+      }
 
       }
     </style>

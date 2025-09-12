@@ -87,7 +87,9 @@ $property_count = json_decode($response, true);
 }
 </style>
 <main id="content">
+<div class="desktop-brs">
 <br><br><br> <br>
+</div>
       <div class="position-relative">
 <section data-animated-id="1">
         <div class="container" bis_skin_checked="1">
