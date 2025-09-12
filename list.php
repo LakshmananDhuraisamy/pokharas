@@ -1,6 +1,13 @@
 <?php include('header.php'); 
+ $_GET['page'];
 
-$term_url=$app_url.'list_page_properties'; 
+if(isset($_GET['page'])) {
+   $pagetxt = '?page='.$_GET['page'];
+} else {
+$pagetxt='';
+}
+
+ $term_url=$app_url.'list_page_properties'.$pagetxt; 
 $termch = curl_init($term_url);
 curl_setopt($termch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($termch, CURLOPT_HTTPHEADER, [
@@ -15,6 +22,28 @@ if (!$term_result) {
 
 // Decode the JSON testimonial_result
 $list_page_property_data_all = json_decode($term_result, true);
+
+if (empty($list_page_property_data_all['results'])) {
+    echo '<script>window.location.href="/list?page=0";</script>';
+    exit;
+}
+
+$term_url=$app_url.'property_amenities_data'; 
+$termch = curl_init($term_url);
+curl_setopt($termch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($termch, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json',
+]);
+
+// Execute request
+$term_result = curl_exec($termch);
+if (!$term_result) {
+    die("Failed to fetch the data: " . curl_error($ch));
+}
+
+// Decode the JSON testimonial_result
+$taxonomy_amenities_data = json_decode($term_result, true);
+
 ?>
 <style>
 .sticky-area-wrap{
@@ -77,106 +106,20 @@ $list_page_property_data_all = json_decode($term_result, true);
 								   aria-expanded="false" aria-controls="other-feature">
                         <span class="text-primary d-inline-block mr-1"><i
 											class="far fa-plus-square"></i></span>
-                        <span class="fs-15 text-heading font-weight-500 hover-primary">Other Features</span>
+                        <span class="fs-15 text-heading font-weight-500 hover-primary">Proprty Amenities</span>
                       </a>
                       <div class="collapse" id="other-feature">
                         <div class="card card-body border-0 px-0 pb-0 pt-3">
                           <ul class="list-group list-group-no-border">
+      <?php foreach ($taxonomy_amenities_data as $key =>  $row){ ?>
                             <li class="list-group-item px-0 pt-0 pb-2">
                               <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check1">
-                                <label class="custom-control-label" for="check1">Air
-                                  Conditioning</label>
+                                <input type="checkbox" class="custom-control-input" id="check<?php echo $row['tid']; ?>">
+                                <label class="custom-control-label" for="check<?php echo $row['tid']; ?>">
+                                  <?php  echo $row['name']; ?> </label>
                               </div>
                             </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check2">
-                                <label class="custom-control-label" for="check2">Laundry</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check3">
-                                <label class="custom-control-label"
-													       for="check3">Refrigerator</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check4">
-                                <label class="custom-control-label" for="check4">Washer</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check5">
-                                <label class="custom-control-label" for="check5">Barbeque</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check6">
-                                <label class="custom-control-label" for="check6">Lawn</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check7">
-                                <label class="custom-control-label" for="check7">Sauna</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check8">
-                                <label class="custom-control-label" for="check8">WiFi</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check9">
-                                <label class="custom-control-label" for="check9">Dryer</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check10">
-                                <label class="custom-control-label" for="check10">Microwave</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check11">
-                                <label class="custom-control-label" for="check11">Swimming
-                                  Pool</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check12">
-                                <label class="custom-control-label" for="check12">Window
-                                  Coverings</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check13">
-                                <label class="custom-control-label" for="check13">Gym</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check14">
-                                <label class="custom-control-label" for="check14">Outdoor
-                                  Shower</label>
-                              </div>
-                            </li>
-                            <li class="list-group-item px-0 pt-0 pb-2">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check15">
-                                <label class="custom-control-label" for="check15">TV Cable</label>
-                              </div>
-                            </li>
+        <?php } ?> 
                           </ul>
                         </div>
                       </div>
@@ -190,7 +133,7 @@ $list_page_property_data_all = json_decode($term_result, true);
                     <h4 class="card-title fs-16 lh-2 text-dark mb-3">Featured Properties</h4>
                     <div class="slick-slider mx-0"
 							     data-slick-options='{"slidesToShow": 1, "autoplay":true}'>
-                     <?php foreach ($list_page_property_data_all as $key =>  $row){ ?>
+                     <?php foreach ($list_page_property_data_all['results'] as $key =>  $row){ ?>
                       <div class="box px-0">
                         <div class="card border-0">
                          <img src="<?php  $rr =  explode(',' , $row['field_main_image']); echo $app_url.$rr[0]; ?>" style="height:400px;" class="card-img" alt="1">
@@ -223,7 +166,7 @@ $list_page_property_data_all = json_decode($term_result, true);
             <div class="col-lg-8 mb-8 mb-lg-0 order-1 order-lg-2" bis_skin_checked="1">
               <div class="row align-items-sm-center mb-6" bis_skin_checked="1">
                 <div class="col-md-6" bis_skin_checked="1">
-                  <h2 class="fs-15 text-dark mb-0">We found <span class="text-primary">45</span> properties
+                  <h2 class="fs-15 text-dark mb-0">We found <span class="text-primary"><?php echo $list_page_property_data_all['total_items']; ?> </span> properties
                     available for
                     you
                   </h2>
@@ -245,7 +188,7 @@ $list_page_property_data_all = json_decode($term_result, true);
               </div>
               <div class="row" bis_skin_checked="1">
                   
-                  <?php foreach ($list_page_property_data_all as $key =>  $row){ ?>
+                  <?php foreach ($list_page_property_data_all['results'] as $key =>  $row){ ?>
                 <div class="col-md-4 mb-6  col-6 list_property_link" data-id="<?php echo $row['nid']; ?>"   bis_skin_checked="1">
                   <div class="card border-0 fadeInUp animated" data-animate="fadeInUp" bis_skin_checked="1">
                     <div class="position-relative hover-change-image bg-hover-overlay rounded-lg card-img" bis_skin_checked="1"> 
@@ -267,18 +210,19 @@ $list_page_property_data_all = json_decode($term_result, true);
                   <?php } ?> 
                   
               </div>
-              <!-- <nav class="pt-4">
+              <nav class="pt-4">
                 <ul class="pagination rounded-active justify-content-center mb-0">
-                  <li class="page-item"><a class="page-link" href="#"><i class="far fa-angle-double-left"></i></a>
+                <?php  $total_pages = $list_page_property_data_all['total_pages'];
+                  $current_page = $list_page_property_data_all['current_page'];
+                  if(isset($_GET['page']) && $_GET['page'] > 0 ){ ?>
+                  <li class="page-item"><a class="page-link" href="/list?page=<?php if(isset($_GET['page'])){ echo $_GET['page']-1; }else{ echo '1';} ?>"><i class="far fa-angle-double-left"></i></a>
                   </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item d-none d-sm-block"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">...</li>
-                  <li class="page-item"><a class="page-link" href="#">6</a></li>
-                  <li class="page-item"><a class="page-link" href="#"><i class="far fa-angle-double-right"></i></a></li>
+                  <?php } ?>
+                  <?php if( $current_page < $total_pages) { ?>
+                  <li class="page-item"><a class="page-link" href="/list?page=<?php if(isset($_GET['page'])){ echo $_GET['page']+1; }else{ echo '1';} ?> "><i class="far fa-angle-double-right"></i></a></li>
+                  <?php } ?>  
                 </ul>
-              </nav> -->
+              </nav>
             </div>
           </div>
         </div>
