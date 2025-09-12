@@ -245,7 +245,7 @@ $property_banner = json_decode($term_result, true);
           color: #fff !important;
       }
       .desktop-brs{
-        display: block !important;
+        display: none !important;
       }
 
       }
