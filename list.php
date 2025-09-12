@@ -52,7 +52,7 @@ $taxonomy_amenities_data = json_decode($term_result, true);
 }
 </style>
 <main id="content">
-      <section class="pb-8 page-title shadow" data-animated-id="1">
+      <section class="pt-12 property_listing_page page-title shadow" data-animated-id="1">
         <div class="container" bis_skin_checked="1">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb pt-6 pt-lg-2 lh-15 pb-5">
@@ -63,7 +63,7 @@ $taxonomy_amenities_data = json_decode($term_result, true);
           </nav>
         </div>
       </section>
-      <section class="pt-8 pb-11" data-animated-id="2">
+      <section class="pt-3 pb-11" data-animated-id="2">
         <div class="container" bis_skin_checked="1">
           <div class="row" bis_skin_checked="1">
 <div class="col-lg-4 order-2 order-lg-1 primary-sidebar sidebar-sticky" id="sidebar">

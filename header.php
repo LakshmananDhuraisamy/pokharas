@@ -247,6 +247,8 @@ $property_banner = json_decode($term_result, true);
       .desktop-brs{
         display: none !important;
       }
-
+      .property_listing_page{
+        padding-top: 0px !important;
       }
+    }
     </style>
