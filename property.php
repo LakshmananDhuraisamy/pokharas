@@ -528,7 +528,22 @@ for ($star = 5; $star >= 1; $star--) {  ?>
         </div>
       </div>
     </div>
-       
+    <section>
+      <div class="d-flex bottom-bar-action bottom-bar-action-01 py-2 px-4 bg-gray-01 align-items-center position-fixed fixed-bottom d-sm-none">
+        <div class="media align-items-center">
+         
+          <img alt="Irene Wallace" class="mr-4 rounded-circle" data-cfsrc="images/irene-wallace.png" src="/images/tarun-se.png">
+          <div class="media-body">
+            <a href="#" class="d-block text-dark fs-15 font-weight-500 lh-15">Tarun Bhujel</a>
+            <span class="fs-13 lh-2">Sales Excutive</span>
+          </div>
+        </div>
+        <div class="ml-auto">
+            <a href="tel:+9779705906441" class="btn btn-primary fs-18 p-2 lh-1 mb-1 shadow-none" target="_blank"><i
+                    class="fal fa-phone"></i></a>
+        </div>
+      </div>
+    </section> 
   </main>
 
 
