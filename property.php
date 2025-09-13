@@ -535,7 +535,7 @@ for ($star = 5; $star >= 1; $star--) {  ?>
           <img alt="Irene Wallace" class="mr-4 rounded-circle" data-cfsrc="images/irene-wallace.png" src="/images/tarun-se.png">
           <div class="media-body">
             <a href="#" class="d-block text-dark fs-15 font-weight-500 lh-15">Tarun Bhujel</a>
-            <span class="fs-13 lh-2">Sales Excutive</span>
+            <span class="fs-13 lh-2">Sales Executive</span>
           </div>
         </div>
         <div class="ml-auto">
