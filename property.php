@@ -172,8 +172,7 @@ $property_count = json_decode($response, true);
                 </div>
               </div>
               <h4 class="fs-22 text-heading mt-6 mb-2">Description</h4>
-              <p class="mb-0 lh-214">Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus
-                scelerisque eleifend donec.</p>
+              <p class="mb-0 lh-214"> <?php echo $single_page_property_data[0]['body']; ?></p>
             </section>
              
             <section class="pt-6 border-bottom pb-4">
