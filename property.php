@@ -413,110 +413,24 @@ for ($star = 5; $star >= 1; $star--) {  ?>
                       <p class="mb-0"><i class="fal fa-phone fs-15 font-weight-light text-primary mr-1"></i> <a href="tel:+9779705906441" class="">+977 970-5906441</a> </p> 
                     </div>
                   </div>
-                <form>
+                <form action="" id="Contact_form" method="post" >
                     <div class="tab-content pt-1 pb-0 px-0 shadow-none" bis_skin_checked="1">
                       <div class="tab-pane fade show active" id="schedule" role="tabpanel" bis_skin_checked="1">
-                        <div class="slick-slider calendar arrow-hide-disable mx-n1 slick-initialized" data-slick-options="{&quot;slidesToShow&quot;: 5, &quot;autoplay&quot;:false,&quot;dots&quot;:false}" bis_skin_checked="1"><div class="slick-prev slick-arrow slick-disabled" aria-label="Previous" aria-disabled="true" style="display: block;" bis_skin_checked="1"><i class="far fa-angle-left"></i></div>
-                          <div class="slick-list draggable" bis_skin_checked="1" style="height: 133.297px;"><div class="slick-track" style="opacity: 1; width: 441px; transform: translate3d(0px, 0px, 0px);" bis_skin_checked="1"><div class="box px-1 py-4 slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 63px;" tabindex="0" bis_skin_checked="1">
-                            <div class="card pointer active border-0 shadow-xxs-1" data-date="March 17, 2020" bis_skin_checked="1">
-                              <div class="card-body p-1 text-center" bis_skin_checked="1">
-                                <p class="day fs-12 text-muted lh-2 mb-0">Tue</p>
-                                <p class="date fs-18 text-heading lh-173 mb-0 font-weight-bold">
-                                  17</p>
-                                <p class="month fs-13 letter-spacing-087 mb-0">Mar</p>
-                              </div>
-                            </div>
-                          </div><div class="box px-1 py-4 slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 63px;" tabindex="0" bis_skin_checked="1">
-                            <div class="card pointer border-0 shadow-xxs-1" data-date="March 18, 2020" bis_skin_checked="1">
-                              <div class="card-body p-1 text-center" bis_skin_checked="1">
-                                <p class="day fs-12 text-muted lh-2 mb-0">Wed</p>
-                                <p class="date fs-18 text-heading lh-173 mb-0 font-weight-bold">
-                                  18</p>
-                                <p class="month fs-13 letter-spacing-087 mb-0">Mar</p>
-                              </div>
-                            </div>
-                          </div><div class="box px-1 py-4 slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 63px;" tabindex="0" bis_skin_checked="1">
-                            <div class="card pointer border-0 shadow-xxs-1" data-date="March 19, 2020" bis_skin_checked="1">
-                              <div class="card-body p-1 text-center" bis_skin_checked="1">
-                                <p class="day fs-12 text-muted lh-2 mb-0">Thur</p>
-                                <p class="date fs-18 text-heading lh-173 mb-0 font-weight-bold">
-                                  19</p>
-                                <p class="month fs-13 letter-spacing-087 mb-0">Mar</p>
-                              </div>
-                            </div>
-                          </div><div class="box px-1 py-4 slick-slide slick-active" data-slick-index="3" aria-hidden="false" style="width: 63px;" tabindex="0" bis_skin_checked="1">
-                            <div class="card pointer border-0 shadow-xxs-1" data-date="March 20, 2020" bis_skin_checked="1">
-                              <div class="card-body p-1 text-center" bis_skin_checked="1">
-                                <p class="day fs-12 text-muted lh-2 mb-0">Fri</p>
-                                <p class="date fs-18 text-heading lh-173 mb-0 font-weight-bold">
-                                  20</p>
-                                <p class="month fs-13 letter-spacing-087 mb-0">Mar</p>
-                              </div>
-                            </div>
-                          </div><div class="box px-1 py-4 slick-slide slick-active" data-slick-index="4" aria-hidden="false" style="width: 63px;" tabindex="0" bis_skin_checked="1">
-                            <div class="card pointer border-0 shadow-xxs-1" data-date="March 21, 2020" bis_skin_checked="1">
-                              <div class="card-body p-1 text-center" bis_skin_checked="1">
-                                <p class="day fs-12 text-muted lh-2 mb-0">Sat</p>
-                                <p class="date fs-18 text-heading lh-173 mb-0 font-weight-bold">
-                                  21</p>
-                                <p class="month fs-13 letter-spacing-087 mb-0">Mar</p>
-                              </div>
-                            </div>
-                          </div><div class="box px-1 py-4 slick-slide" data-slick-index="5" aria-hidden="true" style="width: 63px;" tabindex="-1" bis_skin_checked="1">
-                            <div class="card pointer border-0 shadow-xxs-1" data-date="March 22, 2020" bis_skin_checked="1">
-                              <div class="card-body p-1 text-center" bis_skin_checked="1">
-                                <p class="day fs-12 text-muted lh-2 mb-0">Sun</p>
-                                <p class="date fs-18 text-heading lh-173 mb-0 font-weight-bold">
-                                  22</p>
-                                <p class="month fs-13 letter-spacing-087 mb-0">Mar</p>
-                              </div>
-                            </div>
-                          </div><div class="box px-1 py-4 slick-slide" data-slick-index="6" aria-hidden="true" style="width: 63px;" tabindex="-1" bis_skin_checked="1">
-                            <div class="card pointer border-0 shadow-xxs-1" data-date="March 23, 2020" bis_skin_checked="1">
-                              <div class="card-body p-1 text-center" bis_skin_checked="1">
-                                <p class="day fs-12 text-muted lh-2 mb-0">Mon</p>
-                                <p class="date fs-18 text-heading lh-173 mb-0 font-weight-bold">
-                                  23</p>
-                                <p class="month fs-13 letter-spacing-087 mb-0">Mar</p>
-                              </div>
-                            </div>
-                          </div></div></div>
-                          
-                          
-                          
-                          
-                          
-                          
-                        <div class="slick-next slick-arrow" aria-label="Next" style="" aria-disabled="false" bis_skin_checked="1"><i class="far fa-angle-right"></i></div></div>
-                        <input type="hidden" class="date" name="date" value="March 17, 2020">
+                        <input type="hidden" name="property_id" value="<?php echo $explode_pro[2]; ?>">
                         <div class="form-group mb-2" bis_skin_checked="1">
-                          <div class="input-group input-group-lg bootstrap-timepicker timepicker" bis_skin_checked="1">
-                            <input type="text" class="form-control border-0 text-body shadow-none" placeholder="Choose a time">
-                            <div class="input-group-append input-group-addon" bis_skin_checked="1">
-                              <button class="btn bg-input shadow-none fs-18 lh-1" type="button"><i class="fal fa-angle-down"></i></button>
-                            </div>
-                          </div>
+                          <input type="text" name="name" class="form-control form-control-lg border-0" placeholder="Your Name">
                         </div>
                         <div class="form-group mb-2" bis_skin_checked="1">
-                          <input type="text" class="form-control form-control-lg border-0" placeholder="First Name, Last Name">
-                        </div>
-                        <div class="form-group mb-2" bis_skin_checked="1">
-                          <input type="email" class="form-control form-control-lg border-0" placeholder="Your Email">
+                          <input type="email" name="email" class="form-control form-control-lg border-0" placeholder="Your Email">
                         </div>
                         <div class="form-group mb-4" bis_skin_checked="1">
-                          <input type="tel" class="form-control form-control-lg border-0" placeholder="Your phone">
+                          <input required type="tel" name="phone" class="form-control form-control-lg border-0" placeholder="Your phone">
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg btn-block rounded">Schedule
-                          A Tour
+                          A Visit
                         </button>
-                        <div class="form-group form-check mt-2 mb-0" bis_skin_checked="1">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label fs-13" for="exampleCheck1">Egestas fringilla
-                            phasellus
-                            faucibus
-                            scelerisque
-                            eleifend donec.</label>
-                        </div>
+                        
+
                       </div>
                     
                     </div>

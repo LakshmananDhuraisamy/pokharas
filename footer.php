@@ -268,5 +268,32 @@
         });
         </script>
 
+        <script>
+$(document).ready(function(){
+  $("#Contact_form").on("submit", function(e){
+    e.preventDefault(); // prevent normal form submit
+
+    $.ajax({
+      url: "<?php echo $app_url.'api/property-enquiry'; ?>",        // your PHP file that connects to API
+      type: "POST",
+      data: $(this).serialize(),  // send form data
+      dataType: "json",
+      success: function(response){
+        if(response.status === "success"){
+          alert("✅ " + response.message);
+        } else {
+          alert("❌ " + response.message);
+        }
+      },
+      error: function(xhr, status, error){
+        console.log("AJAX Error:", error);
+        alert("Something went wrong!");
+      }
+    });
+  });
+});
+</script>
+
+
   </body>
 </html>
