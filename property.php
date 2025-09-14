@@ -364,35 +364,6 @@ for ($star = 5; $star >= 1; $star--) {  ?>
               </div>
             </section>
            <?php } ?>
-            <section class="py-6 border-bottom">
-              <h4 class="fs-22 text-heading mb-6">Location</h4>
-              <div class="position-relative" bis_skin_checked="1">
-          <?php 
-          $field_property_geo_location = $single_page_property_data[0]['field_property_geo_location'];  
-          $field_property_location = $single_page_property_data[0]['field_property_location'];
-          if(!empty($field_property_geo_location)){
-            $expval = explode(',', $field_property_geo_location);
-            $field_latitude = trim($expval[0]);
-            $field_longitude = trim($expval[1]);
-           // echo $field_latitude; echo $field_longitude;
-            ?>
-          <iframe width="100%" height="300" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" 
-          src="https://www.google.com/maps?q=<?php echo $field_latitude; ?>,<?php echo $field_longitude; ?>&hl=en&z=14&output=embed">
-          </iframe>
-          <?php }else  if(!empty($field_property_location)){
-             $expval = explode(',', $field_property_location);
-            $field_latitude = trim($expval[0]);
-            $field_longitude = trim($expval[1]);
-            ?>
-            <iframe width="100%" height="300" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" 
-          src="https://www.google.com/maps?q=<?php echo $field_latitude; ?>,<?php echo $field_longitude; ?>&hl=en&z=14&output=embed">
-          </iframe>
-            <?php }else {  ?>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112488.38821620736!2d83.9566183!3d28.2297224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara%2C%20Nepal!5e0!3m2!1sen!2sin!4v1757329116001!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
-           <?php } ?>
-
-            </div>
-            </section>
               
           </article>
           <aside class="col-lg-4 pl-xl-4 primary-sidebar sidebar-sticky" id="sidebar">
