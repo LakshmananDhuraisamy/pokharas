@@ -136,7 +136,7 @@ $property_banner = json_decode($term_result, true);
     <meta name="description" content="Real Estate Html Template">
     <meta name="author" content="">
     <meta name="generator" content="Jekyll">
-    <title>Home - Nepal Properties</title>
+    <title>Home - Pokharas Deals</title>
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet">
@@ -164,8 +164,7 @@ $property_banner = json_decode($term_result, true);
         <div class="container container-xxl">
           <nav class="navbar navbar-expand-xl bg-transparent px-0 w-100">
             <a class="navbar-brand order-0 order-xl-1 mx-xl-auto"
-                   href="/index">
-               Pokharas.com
+                   href="/index"> Pokharas Deals
             </a>
            
             <div class="d-flex d-xl-none order-2">
