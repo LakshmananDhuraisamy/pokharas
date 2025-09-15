@@ -164,7 +164,7 @@ $property_banner = json_decode($term_result, true);
         <div class="container container-xxl">
           <nav class="navbar navbar-expand-xl bg-transparent px-0 w-100">
             <a class="navbar-brand order-0 order-xl-1 mx-xl-auto"
-                   href="/index"> Pokharas Deals
+                   href="/index"> Pokhara Deals
             </a>
            
             <div class="d-flex d-xl-none order-2">
