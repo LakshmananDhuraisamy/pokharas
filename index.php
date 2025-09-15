@@ -290,6 +290,67 @@
         </div>
       </section>
 
+       <section>
+        <div class="container container-xxl">
+          <h2 class="text-heading">Our Promoting Partners</h2>
+          <span class="heading-divider"></span>
+          <p class="mb-3">We collaborate with trusted promoting partners who help us showcase properties to the right audience.</p>
+          <div class="border-top">
+             <div class="d-flex mb-3 align-items-end" bis_skin_checked="1">
+                          <h5 class="card-title fs-24 text-secondary mb-0">Trekking Partners</h5>
+                        </div>
+            <div class="slick-slider mb-6 mx-0 partners"
+			     data-slick-options='{"slidesToShow": 6, "autoplay":true,"dots":false,"arrows":false,"responsive":[{"breakpoint": 992,"settings": {"slidesToShow":3}},{"breakpoint": 768,"settings": {"slidesToShow": 5}},{"breakpoint": 768,"settings": {"slidesToShow": 4}},{"breakpoint": 576,"settings": {"slidesToShow": 2}}]}'>
+            
+              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
+                <a href="#" class="item position-relative hover-change-image">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-hover-1.png"
+						     class="hover-image position-absolute pos-fixed-top" alt="Partner">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-1.png" alt="Partner" class="image">
+                </a>
+              </div>
+
+              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
+                <a href="#" class="item position-relative hover-change-image">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-hover-2.png"
+						     class="hover-image position-absolute pos-fixed-top" alt="Partner">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-2.png" alt="Partner" class="image">
+                </a>
+              </div>
+
+              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
+                <a href="#" class="item position-relative hover-change-image">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-hover-3.png"
+						     class="hover-image position-absolute pos-fixed-top" alt="Partner">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-3.png" alt="Partner" class="image">
+                </a>
+              </div>
+
+              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
+                <a href="#" class="item">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-4.png" alt="Partner" class="image">
+                </a>
+              </div>
+
+              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
+                <a href="#" class="item position-relative hover-change-image">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-hover-5.png"
+						     class="hover-image position-absolute pos-fixed-top" alt="Partner">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-5.png" alt="Partner" class="image">
+                </a>
+              </div>
+
+              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
+                <a href="#" class="item">
+                  <img src="https://templates.g5plus.net/homeid/images/partner-6.png" alt="Partner" class="image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       <section class="py-lg-12 my-lg-1 py-11" style="display: none;">
         <div class="container container-xxl">
           <div class="row">
@@ -714,65 +775,6 @@ We bring serious, pre-screened tenants directly to your doorstep. Your listing w
  
 </style>
 
- <section>
-        <div class="container container-xxl">
-          <h2 class="text-heading">Our Promoting Partners</h2>
-          <span class="heading-divider"></span>
-          <p class="mb-3">We collaborate with trusted promoting partners who help us showcase properties to the right audience.</p>
-          <div class="border-top">
-             <div class="d-flex mb-3 align-items-end" bis_skin_checked="1">
-                          <h5 class="card-title fs-24 text-secondary mb-0">Trekking Partners</h5>
-                        </div>
-            <div class="slick-slider mx-0 partners"
-			     data-slick-options='{"slidesToShow": 6, "autoplay":true,"dots":false,"arrows":false,"responsive":[{"breakpoint": 992,"settings": {"slidesToShow":3}},{"breakpoint": 768,"settings": {"slidesToShow": 5}},{"breakpoint": 768,"settings": {"slidesToShow": 4}},{"breakpoint": 576,"settings": {"slidesToShow": 2}}]}'>
-            
-              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
-                <a href="#" class="item position-relative hover-change-image">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-hover-1.png"
-						     class="hover-image position-absolute pos-fixed-top" alt="Partner">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-1.png" alt="Partner" class="image">
-                </a>
-              </div>
-
-              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
-                <a href="#" class="item position-relative hover-change-image">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-hover-2.png"
-						     class="hover-image position-absolute pos-fixed-top" alt="Partner">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-2.png" alt="Partner" class="image">
-                </a>
-              </div>
-
-              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
-                <a href="#" class="item position-relative hover-change-image">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-hover-3.png"
-						     class="hover-image position-absolute pos-fixed-top" alt="Partner">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-3.png" alt="Partner" class="image">
-                </a>
-              </div>
-
-              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
-                <a href="#" class="item">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-4.png" alt="Partner" class="image">
-                </a>
-              </div>
-
-              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
-                <a href="#" class="item position-relative hover-change-image">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-hover-5.png"
-						     class="hover-image position-absolute pos-fixed-top" alt="Partner">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-5.png" alt="Partner" class="image">
-                </a>
-              </div>
-
-              <div class="box d-flex align-items-center justify-content-center" data-animate="fadeInUp">
-                <a href="#" class="item">
-                  <img src="https://templates.g5plus.net/homeid/images/partner-6.png" alt="Partner" class="image">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       
     </main>
