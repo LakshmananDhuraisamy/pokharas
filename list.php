@@ -44,6 +44,8 @@ if (!$term_result) {
 // Decode the JSON testimonial_result
 $taxonomy_amenities_data = json_decode($term_result, true);
 
+ $total_pages = $list_page_property_data_all['total_pages'];
+ $current_page = $list_page_property_data_all['current_page'];
 ?>
 <style>
 .sticky-area-wrap{
@@ -166,10 +168,7 @@ $taxonomy_amenities_data = json_decode($term_result, true);
             <div class="col-lg-8 mb-8 mb-lg-0 order-1 order-lg-2" bis_skin_checked="1">
               <div class="row align-items-sm-center mb-6" bis_skin_checked="1">
                 <div class="col-md-6" bis_skin_checked="1">
-                  <h2 class="fs-15 text-dark mb-0">We found <span class="text-primary"><?php echo $list_page_property_data_all['total_items']; ?> </span> properties
-                    available for
-                    you
-                  </h2>
+                  <h2 class="fs-15 text-dark mb-0">We found <span class="text-primary"><?php echo 'Few'; ?> </span> properties available for you </h2>
                 </div>
                 <div class="col-md-6 mt-6 mt-md-0" bis_skin_checked="1">
                   <div class="d-flex justify-content-md-end align-items-center" bis_skin_checked="1">
@@ -212,8 +211,7 @@ $taxonomy_amenities_data = json_decode($term_result, true);
               </div>
               <nav class="pt-4">
                 <ul class="pagination rounded-active justify-content-center mb-0">
-                <?php  $total_pages = $list_page_property_data_all['total_pages'];
-                  $current_page = $list_page_property_data_all['current_page'];
+                <?php 
                   if(isset($_GET['page']) && $_GET['page'] > 0 ){ ?>
                   <li class="page-item"><a class="page-link" href="/list?page=<?php if(isset($_GET['page'])){ echo $_GET['page']-1; }else{ echo '1';} ?>"><i class="far fa-angle-double-left"></i></a>
                   </li>
