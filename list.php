@@ -148,7 +148,7 @@ $taxonomy_amenities_data = json_decode($term_result, true);
                               </a>
                               <p class="card-text text-gray-light mb-0 font-weight-500">1421, Nepal</p>
                               <p class="text-white mb-0"><span
-														class="fs-17 font-weight-bold"> <?php echo $row['field_expected_price']; ?> </span>/month
+														class="fs-17 font-weight-bold"> <?php echo $row['field_expected_price']; ?> </span>
                               </p>
                             </div>
                           </div>
