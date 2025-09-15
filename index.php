@@ -710,6 +710,66 @@ We bring serious, pre-screened tenants directly to your doorstep. Your listing w
   </div>
 </div>
 
+<style>
+ 
+</style>
+
+ <section class="bg-gray-02 pt-9 pb-lg-13 pb-11">
+        <div class="container container-xxl">
+          <h2 class="text-heading">Our Promoting Partners</h2>
+          <span class="heading-divider"></span>
+          <p class="mb-7">We collaborate with trusted promoting partners who help us showcase properties to the right audience.</p>
+          <div class="slick-slider mx-n2 partners-slide"
+             data-slick-options='{"slidesToShow": 5,"arrows":false, "autoplay":false,"dots":false,"responsive":[{"breakpoint": 1600,"settings": {"slidesToShow":4}},{"breakpoint": 1200,"settings": {"slidesToShow":3}},{"breakpoint": 992,"settings": {"slidesToShow":2}},{"breakpoint": 768,"settings": {"slidesToShow": 2}},{"breakpoint": 576,"settings": {"slidesToShow": 1}}]}'>
+            
+             <div class="box px-2" data-animate="zoomIn">
+              <div class="card text-white bg-overlay-gradient-5 hover-zoom-in">
+                <img src="images/partners-trekking.webp" class="card-img" alt="New York">
+                <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
+                  <h2 class="mb-0 fs-20 lh-182"><a href="/" class="text-white">Trekking</a></h2>
+                  <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">Partner</p>
+                </div>
+              </div>
+            </div>
+            <div class="box px-2" data-animate="zoomIn">
+              <div class="card text-white bg-overlay-gradient-5 hover-zoom-in">
+                <img src="images/partners-hotels.webp" class="card-img" alt="Los Angeles">
+                <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
+                  <h2 class="mb-0 fs-20 lh-182"><a href="/" class="text-white">Hotels</a></h2>
+                  <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">Partner</p>
+                </div>
+              </div>
+            </div>
+            <div class="box px-2" data-animate="zoomIn">
+              <div class="card text-white bg-overlay-gradient-5 hover-zoom-in">
+                <img src="images/partners-massage.jpg" class="card-img" alt="San Jose">
+                <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
+                  <h2 class="mb-0 fs-20 lh-182"><a href="/" class="text-white">Massage</a></h2>
+                  <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">Partner</p>
+                </div>
+              </div>
+            </div>
+            <div class="box px-2" data-animate="zoomIn">
+              <div class="card text-white bg-overlay-gradient-5 hover-zoom-in">
+                <img src="images/partners-adventure.avif" class="card-img" alt="Fort Worth">
+                <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
+                  <h2 class="mb-0 fs-20 lh-182"><a href="/" class="text-white">Adventure</a></h2>
+                  <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">Partner</p>
+                </div>
+              </div>
+            </div>
+            <div class="box px-2" data-animate="zoomIn">
+              <div class="card text-white bg-overlay-gradient-5 hover-zoom-in">
+                <img src="images/partners-activity.jpg" class="card-img" alt="Kansas City">
+                <div class="card-img-overlay d-flex justify-content-end flex-column p-4">
+                  <h2 class="mb-0 fs-20 lh-182"><a href="/" class="text-white">Activity</a></h2>
+                  <p class="fs-13 font-weight-500 letter-spacing-087 mb-0">Partner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       
       
