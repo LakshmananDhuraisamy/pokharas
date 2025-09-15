@@ -274,7 +274,7 @@ $(document).ready(function(){
     e.preventDefault(); // prevent normal form submit
 
     $.ajax({
-      url: "<?php echo $app_url.'api/property-enquiry'; ?>",        // your PHP file that connects to API
+      url: "<?php echo $app_url.'api/property-enquiry'; ?>", 
       type: "POST",
       data: $(this).serialize(),  // send form data
       dataType: "json",
