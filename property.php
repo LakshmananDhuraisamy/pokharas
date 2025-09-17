@@ -167,7 +167,7 @@ $property_count = json_decode($response, true);
                   <p class="mb-0"><i class="fal fa-map-marker-alt mr-2"></i><?php echo $single_page_property_data[0]['field_address']; ?></p>
                 </div>
                 <div class="mt-2 text-lg-right" bis_skin_checked="1">
-                  <p class="fs-22 text-heading font-weight-bold mb-0"><?php echo $single_page_property_data[0]['field_expected_price']; ?> </p>
+                  <p class="fs-22 text-heading font-weight-bold mb-0"><?php echo $single_page_property_data[0]['field_expected_price']; ?>  <?php if(isset($single_page_property_data[0]['field_price_per_type'])){ echo '/'.$single_page_property_data[0]['field_price_per_type']; }else{ echo '';} ?> </p>
                   <p class="mb-0"><?php echo $single_page_property_data[0]['field_built_up_area_in_sq_ft_sq']; ?> </p>
                 </div>
               </div>
@@ -184,7 +184,10 @@ $property_count = json_decode($response, true);
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Price</dt>
-                  <dd><?php echo $single_page_property_data[0]['field_expected_price']; ?></dd>
+                  <dd>
+                    <?php echo $single_page_property_data[0]['field_expected_price']; ?>
+                     <?php if(isset($single_page_property_data[0]['field_price_per_type'])){ echo '/'.$single_page_property_data[0]['field_price_per_type']; }else{ echo '';} ?>
+              </dd>
                 </dl>
                 <dl class="col-sm-6 mb-0 d-flex">
                   <dt class="w-110px fs-14 font-weight-500 text-heading pr-2">Property type</dt>

@@ -14,7 +14,7 @@
               <a class="d-block text-muted hover-white" href=".">www.pokharas.com</a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-2 mb-6 mb-md-0">
+          <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
             <h4 class="text-white fs-16 my-4 font-weight-500">Popular Searches</h4>
             <ul class="list-group list-group-flush list-group-no-border">
               <li class="list-group-item bg-transparent p-0">
@@ -22,7 +22,7 @@
               </li>
               <li class="list-group-item bg-transparent p-0">
                 <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Apartment Low to
-                  hide</a>
+                  high</a>
               </li>
               <li class="list-group-item bg-transparent p-0">
                 <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Offices for Buy</a>
@@ -32,36 +32,37 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-6 col-lg-2 mb-6 mb-md-0">
+          <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
             <h4 class="text-white fs-16 my-4 font-weight-500">Quick links</h4>
             <ul class="list-group list-group-flush list-group-no-border">
-              <li class="list-group-item bg-transparent p-0">
+             <li class="list-group-item bg-transparent p-0">
+                <a href="/faq" class="text-muted lh-26 font-weight-500 hover-white">FAQ</a>
+              </li>
+            <li class="list-group-item bg-transparent p-0">
                 <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Terms of Use</a>
               </li>
               <li class="list-group-item bg-transparent p-0">
                 <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Privacy Policy</a>
               </li>
               <li class="list-group-item bg-transparent p-0">
-                <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Contact Support</a>
-              </li>
-              <li class="list-group-item bg-transparent p-0">
                 <a href="#" class="text-muted lh-26 hover-white font-weight-500">Careers</a>
               </li>
             </ul>
           </div>
-          <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
-            <h4 class="text-white fs-16 my-4 font-weight-500">Sign Up for Our Newsletter</h4>
-            <p class="font-weight-500 text-muted lh-184">Lorem ipsum dolor sit amet, consecte tur cing elit.
-              Suspe ndisse suscipit sagittis </p>
-            <form>
-              <div class="input-group input-group-lg mb-6">
-                <input type="text" name="email" required class="form-control bg-white shadow-none border-0 z-index-1" placeholder="Your email">
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="submit">Subscribe</button>
-                </div>
-              </div>
-            </form>
-            <ul class="list-inline mb-0">
+
+        </div>
+        
+        <div class="mt-0 mt-md-10 row">
+          <ul class="list-inline mb-0 col-md-4 mr-auto">
+            <li class="list-inline-item mr-6">
+              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Privacy Policy</a>
+            </li>
+          </ul>
+
+           <ul class="list-inline col-md-4 mb-0">
               <li class="list-inline-item mr-0">
                 <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
                                 class="fab fa-twitter"></i></a>
@@ -79,17 +80,7 @@
                                 class="fab fa-linkedin-in"></i></a>
               </li>
             </ul>
-          </div>
-        </div>
-        <div class="mt-0 mt-md-10 row">
-          <ul class="list-inline mb-0 col-md-6 mr-auto">
-            <li class="list-inline-item mr-6">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Terms of Use</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-muted lh-26 font-weight-500 hover-white">Privacy Policy</a>
-            </li>
-          </ul>
+
           <p class="col-md-auto mb-0 text-muted">
             © 2020 Pokharas.com All Rights Reserved
           </p>

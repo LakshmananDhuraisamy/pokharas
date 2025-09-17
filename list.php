@@ -200,6 +200,7 @@ $taxonomy_amenities_data = json_decode($term_result, true);
                       <!-- <p class="font-weight-500 text-gray-light mb-0">1421 , Nepal</p> -->
                       <p class="fs-17 font-weight-bold text-heading mb-0 lh-16">
                         <?php echo $row['field_expected_price']; ?> 
+                        <?php if(isset($row['field_price_per_type'])){ echo '/'.$row['field_price_per_type']; }else{ echo '';} ?>
                       </p>
                     </div>
                      
