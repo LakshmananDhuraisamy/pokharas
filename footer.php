@@ -3,15 +3,15 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-6 mb-md-0">
             <a class="d-block mb-2" href="#">
-              <img src="images/logo-white-primary.png" alt="HomeID">
+              Pokhara Deals
             </a>
             <div class="lh-26 font-weight-500">
-              <p class="mb-0">58 Howard Street #2 San Francisco</p>
-              <a class="d-block text-muted hover-white" href="mailto:contact@homeid.com">contact@homeid.com</a>
+              <p class="mb-0">58 Howard Street #2 Nepal</p>
+              <a class="d-block text-muted hover-white" href="mailto:contact@pokharas.com">contact@pokharas.com</a>
               <a class="d-block text-lighter font-weight-bold fs-15 hover-white"
                        href="tel:(+68)122109876">(+68)1221
                 09876</a>
-              <a class="d-block text-muted hover-white" href=".">www.homeid.com</a>
+              <a class="d-block text-muted hover-white" href=".">www.pokharas.com</a>
             </div>
           </div>
           <div class="col-md-6 col-lg-2 mb-6 mb-md-0">
@@ -91,7 +91,7 @@
             </li>
           </ul>
           <p class="col-md-auto mb-0 text-muted">
-            © 2020 homeID. All Rights Reserved
+            © 2020 Pokharas.com All Rights Reserved
           </p>
         </div>
       </div>
