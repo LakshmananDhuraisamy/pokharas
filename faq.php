@@ -1,4 +1,20 @@
-<?php include('header.php'); ?>
+<?php include('header.php');
+
+$term_url=$app_url.'get-faqs/154'; 
+$termch = curl_init($term_url);
+curl_setopt($termch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($termch, CURLOPT_HTTPHEADER, [
+    'Content-Type: application/json',
+]);
+
+// Execute request
+$term_result = curl_exec($termch);
+if (!$term_result) {
+    die("Failed to fetch the data: " . curl_error($ch));
+}
+// Decode the JSON testimonial_result
+$page_faqs = json_decode($term_result, true);
+?>
 <style>
 .sticky-area-wrap{
     background: black !important;
@@ -28,52 +44,23 @@
                       <div class="col-md-12 mb-12 mb-md-0" bis_skin_checked="1">
                         <div id="accordion-style-02" class="accordion accordion-02 my-7 mt-md-0" bis_skin_checked="1">
                          
+                         <?php foreach ($page_faqs as $key =>  $row){ ?>
+
                           <div class="card border-top-0 border-right-0 border-left-0 border-bottom rounded-0 pb-5 mb-4 pl-7 pr-5 position-relative" bis_skin_checked="1">
-                            <div class="card-header border-0 bg-white p-0" id="heading_19" bis_skin_checked="1">
+                            <div class="card-header border-0 bg-white p-0" id="heading_<?php echo $key; ?>" bis_skin_checked="1">
                               <h5 class="mb-0">
-                                <button class="btn btn-link fs-18 fs-md-22 font-weight-500 p-0 border-0 " data-toggle="collapse" data-target="#collapse_19" aria-expanded="true" aria-controls="collapse_19">
-                                  Why do I have to pay a viewing fee?
+                                <button class="btn btn-link fs-18 fs-md-22 font-weight-500 p-0 border-0 " data-toggle="collapse" data-target="#collapse_<?php echo $key; ?>" aria-expanded="true" aria-controls="collapse_<?php echo $key; ?>">
+                                  <?php echo $row['field_faq_title']; ?> 
                                 </button>
                               </h5>
                             </div>
-                            <div id="collapse_19" class="collapse show" aria-labelledby="heading_19" data-parent="#accordion-style-02" bis_skin_checked="1" style="">
+                            <div id="collapse_<?php echo $key; ?>" class="collapse" aria-labelledby="heading_<?php echo $key; ?>" data-parent="#accordion-style-02" bis_skin_checked="1" style="">
                               <div class="card-body px-0 pt-2 pb-1 lh-214" bis_skin_checked="1">
-                             This ensures we only work with serious renters and cover the cost of coordinating multiple property visits in one trip.
+                              <?php echo $row['field_faq_description']; ?> 
                               </div>
                             </div>
                           </div>
-                          <div class="card border-top-0 border-right-0 border-left-0 border-bottom rounded-0 pb-5 mb-4 pl-7 pr-5 position-relative" bis_skin_checked="1">
-                            <div class="card-header border-0 bg-white p-0" id="heading_20" bis_skin_checked="1">
-                              <h5 class="mb-0">
-                                <button class="btn btn-link fs-18 fs-md-22 font-weight-500 p-0 border-0 collapsed" data-toggle="collapse" data-target="#collapse_20" aria-expanded="false" aria-controls="collapse_20">
-                                 What if I don’t choose any apartment?
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="collapse_20" class="collapse" aria-labelledby="heading_20" data-parent="#accordion-style-02" bis_skin_checked="1" style="">
-                              <div class="card-body px-0 pt-2 pb-1 lh-214" bis_skin_checked="1">
-                              No problem — you only pay the viewing fee. There’s no obligation to rent.
-                              </div>
-                            </div>
-                          </div>
-                          
-                          
-                            <div class="card border-top-0 border-right-0 border-left-0 border-bottom rounded-0 pb-5 mb-4 pl-7 pr-5 position-relative" bis_skin_checked="1">
-                            <div class="card-header border-0 bg-white p-0" id="heading_21" bis_skin_checked="1">
-                              <h5 class="mb-0">
-                                <button class="btn btn-link fs-18 fs-md-22 font-weight-500 p-0 border-0 collapsed" data-toggle="collapse" data-target="#collapse_21" aria-expanded="false" aria-controls="collapse_21">
-                                  Is the commission negotiable? 
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="collapse_21" class="collapse" aria-labelledby="heading_21" data-parent="#accordion-style-02" bis_skin_checked="1" style="">
-                              <div class="card-body px-0 pt-2 pb-1 lh-214" bis_skin_checked="1">
-                            Our commission is already one of the lowest in the market at 3–5%.
-                              </div>
-                            </div>
-                          </div>
-                          
-                          
+                        <?php } ?>
                           
                           </div>
                         </div>
