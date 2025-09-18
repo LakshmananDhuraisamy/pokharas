@@ -154,6 +154,7 @@ $property_banner = json_decode($term_result, true);
     <link rel="stylesheet" href="/vendors/dataTables/jquery.dataTables.min.css">
     <!-- Themes core CSS -->
     <link rel="stylesheet" href="/css/themes.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Favicons -->
     <!-- <link rel="icon" href="images/favicon.ico"> -->
  
