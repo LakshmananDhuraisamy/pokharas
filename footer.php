@@ -9,8 +9,7 @@
               <p class="mb-0">58 Howard Street #2 Nepal</p>
               <a class="d-block text-muted hover-white" href="mailto:contact@pokharas.com">contact@pokharas.com</a>
               <a class="d-block text-lighter font-weight-bold fs-15 hover-white"
-                       href="tel:(+68)122109876">(+68)1221
-                09876</a>
+                       href="tel:+9779805007281">(+977) 98050 07281</a>
               <a class="d-block text-muted hover-white" href=".">www.pokharas.com</a>
             </div>
           </div>
@@ -64,16 +63,12 @@
 
            <ul class="list-inline col-md-4 mb-0">
               <li class="list-inline-item mr-0">
-                <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/pokharas.in" target="_blank" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
+                                class="fab fa-instagram"></i></a>
               </li>
               <li class="list-inline-item mr-0">
                 <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
                                 class="fab fa-facebook-f"></i></a>
-              </li>
-              <li class="list-inline-item mr-0">
-                <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
-                                class="fab fa-skype"></i></a>
               </li>
               <li class="list-inline-item mr-0">
                 <a href="#" class="text-white opacity-3 fs-25 px-4 opacity-hover-10"><i
@@ -82,7 +77,7 @@
             </ul>
 
           <p class="col-md-auto mb-0 text-muted">
-            © 2020 Pokharas.com All Rights Reserved
+            © 2025 Pokharas.com All Rights Reserved
           </p>
         </div>
       </div>
