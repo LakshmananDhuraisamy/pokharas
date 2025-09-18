@@ -84,7 +84,7 @@
                         <?php } ?> 
                       </div>
                       <div class="mt-auto px-2">
-                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
+                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?>  <?php if(isset($row['field_price_per_type'])){ echo '/'.$row['field_price_per_type']; }else{ echo '';} ?> </p>
                         <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal1" class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
@@ -136,7 +136,7 @@
                         <?php } ?> 
                       </div>
                       <div class="mt-auto px-2">
-                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
+                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?>  <?php if(isset($row['field_price_per_type'])){ echo '/'.$row['field_price_per_type']; }else{ echo '';} ?> </p>
                         <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void()" data-toggle="modal" data-target="#myModal1"  class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
@@ -189,7 +189,7 @@
                         <?php } ?> 
                       </div>
                       <div class="mt-auto px-2">
-                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?></p>
+                        <p class="fs-17 font-weight-bold text-white mb-0 lh-13"><?php echo $row['field_expected_price']; ?>  <?php if(isset($row['field_price_per_type'])){ echo '/'.$row['field_price_per_type']; }else{ echo '';} ?></p>
                         <h4 class="mt-0 mb-2 lh-1"><a href="javascript:void()" data-toggle="modal" data-target="#myModal1" class="fs-16 text-white"><?php echo $row['title']; ?></a></h4>
                         <div class="border-top border-white-opacity-03 pt-2">
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
