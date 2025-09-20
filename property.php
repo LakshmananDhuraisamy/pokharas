@@ -85,6 +85,9 @@ $property_count = json_decode($response, true);
     background: black !important;
     border-radius: 90px !important;
 }
+.floating_btn {
+    bottom: 60px !important;
+}
 </style>
 <main id="content">
 <div class="desktop-brs">
