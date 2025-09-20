@@ -384,7 +384,7 @@ for ($star = 5; $star >= 1; $star--) {  ?>
                     <div class="media-body" bis_skin_checked="1">
                       <h5 class="mb-0 fs-16 text-dark ">TARUN BHUJEL</h5>
                       <p class="mb-0">Sales Executive</p>
-                      <p class="mb-0"><i class="fal fa-phone fs-15 font-weight-light text-primary mr-1"></i> <a href="https://wa.me/+9779705906441" target="_blank" class="">+977 970-5906441</a> </p> 
+                      <p class="mb-0"><i class="fal fa-phone fs-15 font-weight-light text-primary mr-1"></i> <a href="https://wa.me/+9779705906441?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.%20<?php echo urlencode($actual_link); ?>" target="_blank" class="">+977 970-5906441</a> </p> 
                     </div>
                   </div>
                   <?php
@@ -464,7 +464,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
         </div>
         <div class="ml-auto">
-            <a href="https://wa.me/+9779705906441" target="_blank" class="btn btn-primary fs-18 p-2 lh-1 mb-1 shadow-none" target="_blank"><i
+            <a href="https://wa.me/+9779705906441?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.%20<?php echo urlencode($actual_link); ?>" target="_blank" class="btn btn-primary fs-18 p-2 lh-1 mb-1 shadow-none" target="_blank"><i
                     class="fal fa-phone"></i></a>
         </div>
       </div>

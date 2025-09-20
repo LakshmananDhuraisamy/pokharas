@@ -1,7 +1,7 @@
 <?php
 $app_url = 'https://app.cattain.in/';
 
- 
+$actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $term_url=$app_url.'property_list_all'; 
 $termch = curl_init($term_url);
 curl_setopt($termch, CURLOPT_RETURNTRANSFER, true);
