@@ -82,7 +82,7 @@
         </div>
       </div>
 <div class="floating_btn">
-    <a target="_blank" href="https://wa.me/+9779805007281">
+    <a target="_blank" href="https://wa.me/+9779805007281?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="float">
       <div class="contact_icon">
         <i class="fa fa-whatsapp my-float"></i>
       </div>
@@ -369,7 +369,7 @@
           });
         });
         </script>
-
+         
         <script>
 $(document).ready(function(){
   $("#Contact_form").on("submit", function(e){
@@ -393,6 +393,15 @@ $(document).ready(function(){
       }
     });
   });
+
+  $("#filter_shoty_by").on("change", function(e){
+    var short_by_val=  $(this).val();
+    if(short_by_val != null && short_by_val != '' && short_by_val != undefined){   
+    window.location.href = 'list?shortby=' + short_by_val;
+    }
+  });
+
+
 });
 </script>
 
