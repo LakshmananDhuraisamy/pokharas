@@ -108,7 +108,46 @@ $property_count = json_decode($response, true);
             </ol>
           </nav>
         </div>
+           <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     $data = $_POST;
+    // API endpoint
+    $url = "https://app.cattain.in/api/property-enquiry";
+    // Initialize cURL
+    $ch = curl_init($url);
+    // cURL options
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    // If API requires JSON instead of form-data
+    // curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
+    // curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+    // Execute
+    $response = curl_exec($ch);
+    $error    = curl_error($ch);
+    curl_close($ch);
+
+    if ($error) {
+        echo "❌ cURL Error: " . $error;
+    } else {
+        // Decode JSON response
+        $eq_result = json_decode($response, true);
+    }
+}
+?>
+
         <div class="container-fluid" bis_skin_checked="1">
+        <div class="" bis_skin_checked="1" style="text-align: center; ">
+          <?php
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if($eq_result && isset($eq_result["status"]) && $eq_result["status"] === "success") { 
+            echo "✅ " . $eq_result["message"];
+        } else {
+            echo "❌ Something went wrong: " . $response;
+        } } ?>
+        </div>
           <div class="position-relative zoomIn animated" data-animate="zoomIn" bis_skin_checked="1">
            
           <div class="row galleries m-n1" bis_skin_checked="1">
@@ -390,43 +429,6 @@ for ($star = 5; $star >= 1; $star--) {  ?>
                       <p class="mb-0"><i class="fal fa-phone fs-15 font-weight-light text-primary mr-1"></i> <a href="https://wa.me/+9779705906441?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.%20<?php echo urlencode($actual_link); ?>" target="_blank" class="">+977 970-5906441</a> </p> 
                     </div>
                   </div>
-                  <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-     $data = $_POST;
-    // API endpoint
-    $url = "https://app.cattain.in/api/property-enquiry";
-    // Initialize cURL
-    $ch = curl_init($url);
-    // cURL options
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    // If API requires JSON instead of form-data
-    // curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
-    // curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-
-    // Execute
-    $response = curl_exec($ch);
-    $error    = curl_error($ch);
-    curl_close($ch);
-
-    if ($error) {
-        echo "❌ cURL Error: " . $error;
-    } else {
-        // Decode JSON response
-        $result = json_decode($response, true);
-
-        if ($result && isset($result["status"]) && $result["status"] === "success") {
-            echo "✅ " . $result["message"];
-        } else {
-            echo "❌ Something went wrong: " . $response;
-        }
-    }
-}
-?>
-
-
                 <form action="" id="" method="post" >
                     <div class="tab-content pt-1 pb-0 px-0 shadow-none" bis_skin_checked="1">
                       <div class="tab-pane fade show active" id="schedule" role="tabpanel" bis_skin_checked="1">

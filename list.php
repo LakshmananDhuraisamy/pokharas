@@ -174,12 +174,14 @@ $taxonomy_amenities_data = json_decode($term_result, true);
                   <div class="d-flex justify-content-md-end align-items-center" bis_skin_checked="1">
                     <div class="input-group border rounded input-group-lg w-auto bg-white mr-3" bis_skin_checked="1">
                       <label class="input-group-text bg-transparent border-0 text-uppercase letter-spacing-093 pr-1 pl-3" for="inputGroupSelect01"><i class="fas fa-align-left fs-16 pr-2"></i>Sortby:</label>
-                      <div class="dropdown bootstrap-select form-control border-0 bg-transparent shadow-none p-0 sortby" bis_skin_checked="1"><select class="form-control border-0 bg-transparent shadow-none p-0 selectpicker sortby" data-style="bg-transparent border-0 font-weight-600 btn-lg pl-0 pr-3" id="inputGroupSelect01" name="sortby">
+                      <div class="dropdown bootstrap-select form-control border-0 bg-transparent shadow-none p-0 sortby" bis_skin_checked="1">
+                        <select id="filter_shoty_by" class="form-control border-0 bg-transparent shadow-none p-0 selectpicker sortby" data-style="bg-transparent border-0 font-weight-600 btn-lg pl-0 pr-3" id="inputGroupSelect01" name="sortby">
                         <option selected="">Top Selling</option>
                         <option value="1">Most Viewed</option>
                         <option value="2">Price(low to high)</option>
                         <option value="3">Price(high to low)</option>
-                      </select><div class="dropdown-menu " bis_skin_checked="1"><div class="inner show" role="listbox" id="bs-select-6" tabindex="-1" bis_skin_checked="1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                      </select>
+                      <div class="dropdown-menu " bis_skin_checked="1"><div class="inner show" role="listbox" id="bs-select-6" tabindex="-1" bis_skin_checked="1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
                     </div>
                    
                   </div>
