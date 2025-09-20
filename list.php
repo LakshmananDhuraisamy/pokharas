@@ -1,11 +1,13 @@
 <?php include('header.php'); 
  $_GET['page'];
 
-if(isset($_GET['page'])) {
+if(isset($_GET['page']) && !isset($_GET['searchval'])) {
    $pagetxt = '?page='.$_GET['page'];
-} else {
-$pagetxt='';
-}
+} else if(isset($_GET['searchval']) && !isset($_GET['page'])) {
+   $pagetxt = '?page=0&title='.$_GET['searchval'];
+}else if(isset($_GET['searchval']) && isset($_GET['page'])) {
+   $pagetxt = '?page='.$_GET['page'].'&title='.$_GET['searchval'];
+}else { $pagetxt=''; }
 
  $term_url=$app_url.'list_page_properties'.$pagetxt; 
 $termch = curl_init($term_url);
@@ -58,8 +60,8 @@ $taxonomy_amenities_data = json_decode($term_result, true);
         <div class="container" bis_skin_checked="1">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb pt-6 pt-lg-2 lh-15 pb-5">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Property Listing</li>
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page"><a href="/list"> Property Listing</a></li>
             </ol>
             <h1 class="fs-30 lh-1 mb-0 text-heading font-weight-600">Property Listing</h1>
           </nav>
@@ -215,12 +217,16 @@ $taxonomy_amenities_data = json_decode($term_result, true);
               <nav class="pt-4">
                 <ul class="pagination rounded-active justify-content-center mb-0">
                 <?php 
+                if(isset($_GET['searchval'])) {
+                  $search_text = '&searchval='.$_GET['searchval'];
+                } else {  $pagetxt=''; }
+
                   if(isset($_GET['page']) && $_GET['page'] > 0 ){ ?>
-                  <li class="page-item"><a class="page-link" href="/list?page=<?php if(isset($_GET['page'])){ echo $_GET['page']-1; }else{ echo '1';} ?>"><i class="far fa-angle-double-left"></i></a>
+                  <li class="page-item"><a class="page-link" href="/list?page=<?php if(isset($_GET['page'])){ echo $_GET['page']-1; }else{ echo '1';} echo $search_text; ?>"><i class="far fa-angle-double-left"></i></a>
                   </li>
                   <?php } ?>
                   <?php if( $current_page < $total_pages) { ?>
-                  <li class="page-item"><a class="page-link" href="/list?page=<?php if(isset($_GET['page'])){ echo $_GET['page']+1; }else{ echo '1';} ?> "><i class="far fa-angle-double-right"></i></a></li>
+                  <li class="page-item"><a class="page-link" href="/list?page=<?php if(isset($_GET['page'])){ echo $_GET['page']+1; }else{ echo '1';} echo $search_text; ?>"><i class="far fa-angle-double-right"></i></a></li>
                   <?php } ?>  
                 </ul>
               </nav>

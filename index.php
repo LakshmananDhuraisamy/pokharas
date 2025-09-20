@@ -22,12 +22,12 @@
                   </a>
                 </li>
               </ul>
-              <form class="d-flex">
+              <form class="d-flex" action="list" method="get">
                 <div class="position-relative w-100">
                   <i class="far fa-search text-dark fs-18 position-absolute pl-4 pos-fixed-left-center"></i>
                   <input type="text"
                                class="rounded-bottom-right-lg w-100 pl-8 py-4 bg-white border-0 fs-13 font-weight-500 text-gray-light rounded-0 lh-17"
-                               placeholder="Enter an address, neighborhood" name="search">
+                               placeholder="Enter an address, neighborhood" name="searchval">
                 </div>
                 <button type="submit" class="btn btn-primary fs-16 font-weight-600 rounded-left-0 rounded-lg">
                   Search
@@ -90,24 +90,12 @@
                           <ul class="list-inline d-flex mb-0 flex-wrap mt-2 mt-lg-0 mr-n5">
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
                                                 data-toggle="tooltip" title="  <?php echo $row['field_bhk_type']; ?> ">
-                              <svg class="icon icon-bedroom fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-bedroom"></use>
-                              </svg>
                                <?php echo $row['field_bhk_type']; ?> 
                             </li>
                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="<?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> ">
-                              <svg class="icon icon-square fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-square"></use>
-                              </svg>
-                              <?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> Sq.Ft
-                            </li>
-                            <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
-                              <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-Garage"></use>
-                              </svg>
-                              1 Gr
+                                                data-toggle="tooltip" title="Total Views  <?php echo $row['field_view_count']; ?>">
+                              <i class="fa fa-eye"></i> 
+                              <?php echo $row['field_view_count']; ?> 
                             </li>
                           </ul>
                         </div>
@@ -147,19 +135,10 @@
                               </svg>
                                <?php echo $row['field_bhk_type']; ?>
                             </li>
-                            <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="<?php echo $row['field_built_up_area_in_sq_ft_sq']; ?>">
-                              <svg class="icon icon-square fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-square"></use>
-                              </svg>
-                              <?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> Sq.Ft
-                            </li>
-                            <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
-                              <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-Garage"></use>
-                              </svg>
-                              1 Gr
+                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
+                                                data-toggle="tooltip" title="Total Views  <?php echo $row['field_view_count']; ?> ">
+                              <i class="fa fa-eye"></i> 
+                              <?php echo $row['field_view_count']; ?> 
                             </li>
                           </ul>
                         </div>
@@ -200,19 +179,10 @@
                               </svg>
                                <?php echo $row['field_bhk_type']; ?>
                             </li>
-                            <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title=" <?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> Sq.Ft">
-                              <svg class="icon icon-square fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-square"></use>
-                              </svg>
-                              <?php echo $row['field_built_up_area_in_sq_ft_sq']; ?> Sq.Ft
-                            </li>
-                            <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
-                                                data-toggle="tooltip" title="3 Bedroom">
-                              <svg class="icon icon-Garage fs-18 text-primary mr-1">
-                                <use xlink:href="#icon-Garage"></use>
-                              </svg>
-                              1 Gr
+                             <li class="list-inline-item text-white font-weight-500 fs-13 d-flex align-items-center mr-5"
+                                                data-toggle="tooltip" title="Total Views  <?php echo $row['field_view_count']; ?>">
+                              <i class="fa fa-eye"></i> 
+                              <?php echo $row['field_view_count']; ?> 
                             </li>
                           </ul>
                         </div>
